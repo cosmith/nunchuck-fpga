@@ -21,7 +21,7 @@ signal state : STATE_TYPE;
 
 begin
 
-FSMGlobalTransitions : process(SCL, SDA)
+FSMGlobalTransitions : process(SCL, SDA, GoAddress, GoRead, GoWrite)
 begin
     if SCL'event then
         case state is
