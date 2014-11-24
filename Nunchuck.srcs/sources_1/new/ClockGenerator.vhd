@@ -10,7 +10,7 @@ end ClockGenerator;
 
 architecture Behavioral of ClockGenerator is
 
-constant SCL_FREQ : integer := 200000;
+constant SCL_FREQ : integer := 400000;
 constant TICK_COUNT : integer := 100000000 / SCL_FREQ;
 signal counter : integer := 0;
 

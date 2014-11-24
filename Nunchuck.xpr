@@ -16,13 +16,13 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/ClockGenerator.vhd">
+      <File Path="$PSRCDIR/sources_1/new/FSMAddress.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/SCLGenerator.vhd">
+      <File Path="$PSRCDIR/sources_1/new/ClockGenerator.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -46,7 +46,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/FSMAddress.vhd">
+      <File Path="$PSRCDIR/sources_1/new/SCLGenerator.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -54,8 +54,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="ClockGenerator"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="FSMAddress"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -82,7 +81,7 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="FSMAddressTest"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="SimulationRunTime" Val="1000us"/>
+        <Option Name="SimulationRunTime" Val="10000us"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
