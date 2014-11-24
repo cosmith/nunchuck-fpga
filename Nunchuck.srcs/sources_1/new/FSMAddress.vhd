@@ -20,7 +20,7 @@ begin
 
 FSMAddressTransitions : process(DataTick, Address, GoAddress)
 begin
-    if DataTick'event then
+    if DataTick'event and DataTick = '1' then
         case state is
             when Waiting =>
                 if DataTick = '1' and GoAddress = '1' then
