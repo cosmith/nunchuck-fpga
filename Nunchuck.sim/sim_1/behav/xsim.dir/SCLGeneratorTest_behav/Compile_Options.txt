@@ -1,1 +1,0 @@
---debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "SCLGeneratorTest_behav" --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/SCLGeneratorTest.prj" "xil_defaultlib.SCLGeneratorTest" 

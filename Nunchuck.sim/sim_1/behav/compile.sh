@@ -31,6 +31,6 @@ ExecStep()
        exit $RETVAL
    fi
 }
-XELAB_1="Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/SCLGeneratorTest.prj"
+XELAB_1="Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/FSMAddressTest.prj"
 
-ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot SCLGeneratorTest_behav --prj "$XELAB_1"   xil_defaultlib.SCLGeneratorTest
+ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot FSMAddressTest_behav --prj "$XELAB_1"   xil_defaultlib.FSMAddressTest

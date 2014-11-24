@@ -5,7 +5,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity FSMAddress is
     Port (SCL : in STD_LOGIC;
-          SDAIn : in STD_LOGIC;
           Address : in STD_LOGIC_VECTOR (1 to 7);
           GoAddress : in STD_LOGIC;
           SDAOut : out STD_LOGIC;
@@ -14,18 +13,20 @@ end FSMAddress;
 
 architecture Behavioral of FSMAddress is
 
-type STATE_TYPE is (Waiting, Address1, Address2, Address3, Address4, Address5, Address6, Address7); 
-signal state : STATE_TYPE;
+type STATE_TYPE is (Waiting, Address1, Address2, Address3, Address4, Address5, Address6, Address7, Done); 
+signal state : STATE_TYPE := Waiting;
 
 begin
 
-FSMAddressTransitions : process(SCL, SDAIn, Address, GoAddress, SDAOut, DoneAddress)
+FSMAddressTransitions : process(SCL, Address, GoAddress)
 begin
     if SCL'event then
         case state is
             when Waiting =>
                 if SCL = '1' and GoAddress = '1' then
+                    SDAOut <= 'Z';
                     state <= Address1;
+                    DoneAddress <= '0';
                 end if;
             when Address1 =>
                 if SCL = '1' then
@@ -60,6 +61,11 @@ begin
             when Address7 =>
                 if SCL = '1' then
                     SDAOut <= Address(7);
+                    state <= Done;
+                end if;
+            when Done =>
+                if SCL = '1' then
+                    SDAOut <= 'Z';
                     state <= Waiting;
                     DoneAddress <= '1';
                 end if;

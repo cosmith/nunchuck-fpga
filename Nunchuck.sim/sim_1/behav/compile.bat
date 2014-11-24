@@ -6,7 +6,7 @@ rem  Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 set PATH=%XILINX%\lib\%PLATFORM%;%XILINX%\bin\%PLATFORM%;C:/Xilinx/SDK/2014.2/bin;C:/Xilinx/Vivado/2014.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2014.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado/2014.2/bin;%PATH%
 set XILINX_PLANAHEAD=C:/Xilinx/Vivado/2014.2
 
-xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot SCLGeneratorTest_behav --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/SCLGeneratorTest.prj"   xil_defaultlib.SCLGeneratorTest
+xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot FSMAddressTest_behav --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/FSMAddressTest.prj"   xil_defaultlib.FSMAddressTest
 if errorlevel 1 (
    cmd /c exit /b %errorlevel%
 )
