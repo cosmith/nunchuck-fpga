@@ -1,31 +1,28 @@
--- generates a low frequency tick
+-- generates the SCL signal
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_ARITH.ALL;
 
 entity SCLGenerator is
-    Port (Clk : in STD_LOGIC;
-          Tick : out STD_LOGIC);
+    Port (SlowClock : in STD_LOGIC;
+          SCL : out STD_LOGIC);
 end SCLGenerator;
 
 architecture Behavioral of SCLGenerator is
 
-constant SCL_FREQ : integer := 100000;
-constant TICK_COUNT : integer := 100000000 / SCL_FREQ;
-signal counter : integer := 0;
+signal internalSCL : STD_LOGIC := '1';
 
 begin
 
-process(Clk)
+SCL <= internalSCL;
+
+process(SlowClock)
 begin
-    if Clk'event and Clk = '1' then
-        if counter >= TICK_COUNT then
-            counter <= 0;
-            Tick <= '1';
+    if SlowClock'event and SlowClock = '1' then
+        if internalSCL = '1' then
+            internalSCL <= '0';
         else
-            counter <= counter + 1;
-            Tick <= '0';
+            internalSCL <= '1';
         end if;
     end if;
 end process;
