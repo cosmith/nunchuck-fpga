@@ -2,8 +2,9 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
-entity ClockGenerator is
+entity SCLGenerator is
     Port (Clk : in STD_LOGIC;
           Tick : out STD_LOGIC);
 end SCLGenerator;
@@ -12,7 +13,7 @@ architecture Behavioral of SCLGenerator is
 
 constant SCL_FREQ : integer := 100000;
 constant TICK_COUNT : integer := 100000000 / SCL_FREQ;
-signal counter : integer;
+signal counter : integer := 0;
 
 begin
 
