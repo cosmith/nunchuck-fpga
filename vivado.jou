@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Tue Nov 25 14:02:51 2014
+# Process ID: 3648
+# Log file: Z:/Option ISIA/Wang-Smith/Nunchuck/vivado.log
+# Journal file: Z:/Option ISIA/Wang-Smith/Nunchuck\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {Z:\Option ISIA\Wang-Smith\Nunchuck\Nunchuck.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMWriteTest.vhd} w ]
+add_files -fileset sim_1 {{Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMWriteTest.vhd}}
+update_compile_order -fileset sim_1

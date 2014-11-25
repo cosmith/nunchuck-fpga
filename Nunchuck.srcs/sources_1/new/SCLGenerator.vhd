@@ -4,7 +4,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity SCLGenerator is
-    Port (SlowClock : in STD_LOGIC;
+    Port (Clk : in STD_LOGIC;
+          SlowClock : in STD_LOGIC;
           Start : in STD_LOGIC;
           Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
@@ -47,10 +48,10 @@ begin
     end if;
 end process;
 
-DataTickProc : process (SlowClock)
+DataTickProc : process (Clk, SlowClock)
 begin
-    if SlowClock'event and SlowClock = '1' then
-        if counter = 1 then
+    if Clk'event and Clk = '1' then
+        if SlowClock = '1' and counter = 2 then
             DataTick <= '1';
         else
             DataTick <= '0';

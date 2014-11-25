@@ -1,0 +1,3 @@
+Running: xsim.dir/FSMWriteTest_behav/xsimk.exe -simmode gui -wdb FSMWriteTest_behav.wdb -simrunnum 0 -socket 65533
+Design successfully loaded
+Design Loading CPU Usage: 62 ms
