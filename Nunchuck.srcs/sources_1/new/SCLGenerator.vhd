@@ -9,6 +9,7 @@ entity SCLGenerator is
           Start : in STD_LOGIC;
           Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
+          SCLTick : out STD_LOGIC;
           DataTick : out STD_LOGIC);
 end SCLGenerator;
 
@@ -48,13 +49,21 @@ begin
     end if;
 end process;
 
-DataTickProc : process (Clk, SlowClock)
+TickProc : process (Clk, SlowClock)
 begin
     if Clk'event and Clk = '1' then
-        if SlowClock = '1' and counter = 2 then
-            DataTick <= '1';
+        if SlowClock = '1' then
+            if counter = 2 then
+                DataTick <= '1';
+            elsif counter = 3 then
+                SCLTick <= '1';
+            else
+                DataTick <= '0';
+                SCLTick <= '0';
+            end if;
         else
             DataTick <= '0';
+            SCLTick <= '0';
         end if;
     end if;
 end process;
