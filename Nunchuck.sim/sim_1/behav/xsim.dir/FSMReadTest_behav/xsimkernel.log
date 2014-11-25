@@ -1,3 +1,5 @@
-Running: xsim.dir/FSMReadTest_behav/xsimk.exe -simmode gui -wdb FSMReadTest_behav.wdb -simrunnum 0 -socket 52069
+Running: xsim.dir/FSMReadTest_behav/xsimk.exe -simmode gui -wdb FSMReadTest_behav.wdb -simrunnum 0 -socket 55261
 Design successfully loaded
-Design Loading CPU Usage: 140 ms
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation CPU Usage: 701 ms
