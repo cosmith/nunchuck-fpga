@@ -27,6 +27,7 @@ begin
         case state is
             when Waiting =>
                 DoneRead <= '0';
+                SDAOut <= 'Z';
                 if SCLTick = '1' and GoRead = '1' then
                     Data(1) <= SDAIn;
                     state <= Data1;

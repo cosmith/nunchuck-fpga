@@ -8,12 +8,12 @@ INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/I2CControllerTest.vhd" into library xil_defaultlib
 Starting static elaboration
-WARNING: [VRFC 10-122] fsmi2c remains a black-box since it has no binding entity [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:108]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -22,6 +22,7 @@ Compiling package std.standard
 Compiling package ieee.std_logic_1164
 Compiling architecture behavioral of entity xil_defaultlib.ClockGenerator [clockgenerator_default]
 Compiling architecture behavioral of entity xil_defaultlib.SCLGenerator [sclgenerator_default]
+Compiling architecture behavioral of entity xil_defaultlib.FSMI2CTransitions [fsmi2ctransitions_default]
 Compiling architecture behavioral of entity xil_defaultlib.FSMWrite [fsmwrite_default]
 Compiling architecture behavioral of entity xil_defaultlib.FSMRead [fsmread_default]
 Compiling architecture behavioral of entity xil_defaultlib.FSMAddress [fsmaddress_default]

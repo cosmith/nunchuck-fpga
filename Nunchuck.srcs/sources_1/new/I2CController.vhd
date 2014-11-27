@@ -63,19 +63,21 @@ component FSMWrite
           DoneWrite : out STD_LOGIC);
 end component;
 
-component FSMI2C
+component FSMI2CTransitions
     Port (Clk : in STD_LOGIC;
           SCLTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
+          StartCommand : in STD_LOGIC;
           DoneAddress : in STD_LOGIC;
           DoneRead : in STD_LOGIC;
           DoneWrite : in STD_LOGIC;
           SDAOut : out STD_LOGIC;
           GoAddress : out STD_LOGIC;
           GoRead : out STD_LOGIC;
-          GoWrite : out STD_LOGIC);
+          GoWrite : out STD_LOGIC;
+          GoStartSCL : out STD_LOGIC);
 end component;
 
 signal InternalSlowClock: STD_LOGIC := '0';
@@ -88,9 +90,12 @@ signal InternalGoAddress : STD_LOGIC := '0';
 signal InternalGoRead : STD_LOGIC := '0';
 signal InternalGoWrite : STD_LOGIC := '0';
 signal InternalStop : STD_LOGIC := '0';
-signal InternalSCL : STD_LOGIC := '0';
+signal InternalSCL : STD_LOGIC := '1';
+signal InternalGoStartSCL : STD_LOGIC := '0';
 
 begin
+
+Stop <= InternalStop;
 
 ClkGenPM : ClockGenerator port map (
     Clk => Clk,
@@ -99,25 +104,27 @@ ClkGenPM : ClockGenerator port map (
 SCLGenPM : SCLGenerator port map (
     Clk => Clk,
     SlowClock => InternalSlowClock,
-    Start => Start,
+    Start => InternalGoStartSCL,
     Stop => InternalStop,
     SCL => SCL,
     SCLTick => InternalSCLTick,
     DataTick => InternalDataTick);
 
-FSMI2CPM : FSMI2C port map (
+FSMI2CPM : FSMI2CTransitions port map (
     Clk => Clk,
     SCLTick => InternalSCLTick,
     DataTick => InternalDataTick,
     SDAIn => SDAIn,
     SDAOut => SDAOut,
     SCL => InternalSCL,
+    StartCommand => Start,
     DoneAddress => InternalDoneAddress,
     DoneRead => InternalDoneRead, 
     DoneWrite => InternalDoneWrite,
     GoAddress => InternalGoAddress,
     GoWrite => InternalGoWrite,
-    GoRead => InternalGoRead);
+    GoRead => InternalGoRead,
+    GoStartSCL => InternalGoStartSCL);
 
 FSMWritePM : FSMWrite port map (
     Clk => Clk,
@@ -126,7 +133,8 @@ FSMWritePM : FSMWrite port map (
     SDAIn => SDAIn,
     Data => DataIn,
     GoWrite => InternalGoWrite,
-    DoneWrite => InternalDoneWrite);
+    DoneWrite => InternalDoneWrite,
+    SDAOut => SDAOut);
 
 FSMReadPM : FSMRead port map (
     Clk => Clk,
@@ -134,11 +142,14 @@ FSMReadPM : FSMRead port map (
     DataTick => InternalDataTick,
     SDAIn => SDAIn,
     GoRead => InternalGoRead,
-    DoneRead => InternalDoneRead);
+    DoneRead => InternalDoneRead,
+    SDAOut => SDAOut);
 
 FSMAddressPM : FSMAddress port map(
     DataTick => InternalDataTick,
     Address => SlaveAddress,
-    GoAddress => InternalGoAddress); 
+    GoAddress => InternalGoAddress,
+    SDAOut => SDAOut,
+    DoneAddress => InternalDoneAddress);
 
 end Behavioral;

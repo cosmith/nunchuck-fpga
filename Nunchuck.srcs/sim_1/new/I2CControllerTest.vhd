@@ -19,11 +19,11 @@ component I2CController is
           DataOut : out STD_LOGIC_VECTOR (1 to 8));
 end component;
 
-signal Clk : STD_LOGIC := '0';
-signal SDAIn : STD_LOGIC := '0';
+signal Clk : STD_LOGIC;
+signal SDAIn : STD_LOGIC := 'Z';
 signal DataIn : STD_LOGIC_VECTOR (1 to 8) := "11001100";
 signal DataReady : STD_LOGIC := '0';
-signal SlaveAddress :STD_LOGIC_VECTOR (1 to 7) := "1010101";
+signal SlaveAddress :STD_LOGIC_VECTOR (1 to 7) := "1010010";
 signal Start : STD_LOGIC := '0';
 signal Stop : STD_LOGIC := '0';
 signal SCL : STD_LOGIC := '0';
@@ -31,15 +31,21 @@ signal SDAOut : STD_LOGIC := '0';
 signal DataOut : STD_LOGIC_VECTOR (1 to 8) := "UUUUUUUU";
 
 constant CLK_PERIOD : time := 10ns;
+constant SCL_PERIOD : time := 10us;
 
 begin
 
-I2C : I2CController port map (Clk => Clk,
-                SDAIn => SDAIn,
-                DataIn => DataIn,
-                DataReady => DataReady,
-                SlaveAddress => SlaveAddress,
-                Start => Start);
+I2C : I2CController port map (
+    Clk => Clk,
+    SDAIn => SDAIn,
+    DataIn => DataIn,
+    DataReady => DataReady,
+    SlaveAddress => SlaveAddress,
+    Start => Start,
+    Stop => Stop,
+    SCL => SCL,
+    SDAOut => SDAOut,
+    DataOut => DataOut);
 
 ClockProc : process
 begin
@@ -47,6 +53,26 @@ begin
     wait for CLK_PERIOD / 2;
     Clk <= '1';
     wait for CLK_PERIOD / 2;
+end process;
+
+StartProc : process
+begin
+    Start <= '0';
+    wait for SCL_PERIOD * 4;
+    Start <= '1';
+    wait for CLK_PERIOD;
+    Start <='0';
+    wait for SCL_PERIOD * 1000;
+end process;
+
+AckProc : process
+begin
+    SDAIn <= 'Z';
+    wait for SCL_PERIOD * 13.5;
+    SDAIn <= '1';
+    wait for SCL_PERIOD * 2; -- read and ACK
+    SDAIn <= 'Z';
+    wait for SCL_PERIOD * 1000;
 end process;
 
 end Behavioral;

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="I2CControllerTest_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="I2CControllerTest" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/DataReady" type="logic">
+      <obj_property name="ElementShortName">DataReady</obj_property>
+      <obj_property name="ObjectShortName">DataReady</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/Start" type="logic">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/Stop" type="logic">
+      <obj_property name="ElementShortName">Stop</obj_property>
+      <obj_property name="ObjectShortName">Stop</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/SCLGenPM/DataTick" type="logic">
+      <obj_property name="ElementShortName">DataTick</obj_property>
+      <obj_property name="ObjectShortName">DataTick</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/SCL" type="logic">
+      <obj_property name="ElementShortName">SCL</obj_property>
+      <obj_property name="ObjectShortName">SCL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/SDAIn" type="logic">
+      <obj_property name="ElementShortName">SDAIn</obj_property>
+      <obj_property name="ObjectShortName">SDAIn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/SDAOut" type="logic">
+      <obj_property name="ElementShortName">SDAOut</obj_property>
+      <obj_property name="ObjectShortName">SDAOut</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/DataOut" type="array">
+      <obj_property name="ElementShortName">DataOut[1:8]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[1:8]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/SCL_PERIOD" type="other">
+      <obj_property name="ElementShortName">SCL_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">SCL_PERIOD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMI2CPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">FSM</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMAddressPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">FSMAddress</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMReadPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">FSMRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMWritePM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">FSMWrite</obj_property>
+   </wvobject>
+</wave_config>

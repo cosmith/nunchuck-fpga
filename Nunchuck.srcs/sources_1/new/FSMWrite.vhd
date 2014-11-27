@@ -30,6 +30,8 @@ begin
                 if DataTick = '1' and GoWrite = '1' then
                     SDAOut <= Data(1);
                     state <= Data1;
+                else
+                    SDAOut <= 'Z';
                 end if;
             when Data1 =>
                 if DataTick = '1' then

@@ -1,6 +1,7 @@
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd"
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd"
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd"
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd"
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd"
 vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd"

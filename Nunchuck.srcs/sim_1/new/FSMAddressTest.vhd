@@ -84,5 +84,4 @@ begin
     GoAddress <= '0';
 end process;
 
-
 end Behavioral;

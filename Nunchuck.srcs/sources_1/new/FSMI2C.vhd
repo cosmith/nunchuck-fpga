@@ -9,13 +9,15 @@ entity FSMI2CTransitions is
           DataTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
+          StartCommand : in STD_LOGIC;
           DoneAddress : in STD_LOGIC;
           DoneRead : in STD_LOGIC;
           DoneWrite : in STD_LOGIC;
           SDAOut : out STD_LOGIC;
           GoAddress : out STD_LOGIC;
           GoRead : out STD_LOGIC;
-          GoWrite : out STD_LOGIC);
+          GoWrite : out STD_LOGIC;
+          GoStartSCL : out STD_LOGIC);
 end FSMI2CTransitions;
 
 
@@ -27,15 +29,18 @@ signal state : STATE_TYPE;
 
 begin
 
-FSMGlobalTransitions : process(Clk, SCLTick, DataTick, SDAIn, GoAddress, GoRead, GoWrite)
+FSMGlobalTransitions : process(Clk, SCLTick, DataTick, SDAIn, StartCommand, DoneRead, DoneAddress, DoneWrite)
 begin
     if Clk'event and Clk = '1' then
         case state is
             when Idle =>
-                if SCLTick = '1' and SDAIn = '0' then
+                if StartCommand = '1' then
                     state <= Start;
+                    GoStartSCL <= '1';
+                    SDAOut <= '0';
                 else
                     state <= Idle;
+                    SDAOut <= 'Z';
                 end if;
             when Start =>
                 if SCLTick = '1' then
@@ -49,10 +54,11 @@ begin
                    state <= WaitAddress;
                end if;
             when WaitAddress =>
+                SDAOut <= 'Z';
                 if SCLTick = '1' then
                     GoAddress <= '0';
                     if DoneAddress = '1' then
-                        if SDA = '1' then
+                        if SDAIn = '1' then
                             state <= Read;
                         else
                             state <= Write;
@@ -63,7 +69,7 @@ begin
                 end if;
             when Read =>
                if SCLTick = '1' then
-                   if SDA = '1' then -- nack
+                   if SDAIn = '1' then -- nack
                        state <= Address;
                    else -- ack
                        state <= WaitRead;
@@ -71,6 +77,7 @@ begin
                    end if;
                 end if;
             when WaitRead =>
+                SDAOut <= 'Z';
                 if SCLTick = '1' then
                     GoRead <= '0';
                     if DoneRead = '1' then
@@ -81,7 +88,7 @@ begin
                 end if;
             when Write =>
                if SCLTick = '1' then
-                   if SDA = '1' then -- nack
+                   if SDAIn = '1' then -- nack
                        state <= Address;
                    else -- ack
                        state <= WaitWrite;
@@ -89,6 +96,7 @@ begin
                    end if;
                 end if;
             when WaitWrite =>
+                SDAOut <= 'Z';
                 if SCLTick = '1' then
                     GoWrite <= '0';
                     if DoneWrite = '1' then
@@ -99,7 +107,7 @@ begin
                 end if;
             when Stop =>
                 if SCLTick = '1' then
-                    if SDA = '1' then
+                    if SDAIn = '1' then
                         state <= Idle;
                     end if;
                 end if;
