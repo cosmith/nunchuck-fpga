@@ -1,0 +1,8 @@
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/I2CControllerTest.vhd"
+verilog xil_defaultlib "C:/Xilinx/Vivado/2014.2/data/verilog/src/glbl.v"

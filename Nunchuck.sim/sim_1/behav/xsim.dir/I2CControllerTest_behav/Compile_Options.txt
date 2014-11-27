@@ -1,0 +1,1 @@
+--debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "I2CControllerTest_behav" --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/I2CControllerTest.prj" "xil_defaultlib.I2CControllerTest" 

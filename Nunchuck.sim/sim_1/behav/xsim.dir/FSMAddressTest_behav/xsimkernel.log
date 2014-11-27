@@ -1,5 +1,0 @@
-Running: xsim.dir/FSMAddressTest_behav/xsimk.exe -simmode gui -wdb FSMAddressTest_behav.wdb -simrunnum 0 -socket 62501
-Design successfully loaded
-Design Loading CPU Usage: 170 ms
-Simulation completed
-Simulation CPU Usage: 186 ms
