@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Fri Nov 28 14:52:21 2014
+| Date         : Fri Nov 28 16:22:19 2014
 | Host         : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file Nunchuck_io_placed.rpt
 | Design       : Nunchuck

@@ -3,9 +3,11 @@
 # 
 
   set_param gui.test TreeTableDev
+  set_param xicom.use_bs_reader 1
 set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {Labtools 27-147} -limit 4294967295
 create_project -in_memory -part xc7z020clg484-1
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.0 [current_project]
@@ -21,6 +23,9 @@ read_vhdl -library xil_defaultlib {
   {Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd}
   {Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd}
 }
+read_xdc {{Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/constrs_1/new/constraints.xdc}}
+set_property used_in_implementation false [get_files {{Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/constrs_1/new/constraints.xdc}}]
+
 set_param synth.vivado.isSynthRun true
 set_property webtalk.parent_dir {Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.cache/wt} [current_project]
 set_property parent.project_dir {Z:/Option ISIA/Wang-Smith/Nunchuck} [current_project]

@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date             : Fri Nov 28 14:52:55 2014
+| Date             : Fri Nov 28 16:22:54 2014
 | Host             : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command          : 
 | Design           : Nunchuck
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.707 |
-| Dynamic (W)              | 0.579 |
+| Total On-Chip Power (W)  | 0.715 |
+| Dynamic (W)              | 0.587 |
 | Device Static (W)        | 0.129 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 76.8  |
-| Junction Temperature (C) | 33.2  |
+| Max Ambient (C)          | 76.7  |
+| Junction Temperature (C) | 33.3  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,16 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.039 |      295 |       --- |             --- |
-|   LUT as Logic |     0.026 |       98 |     53200 |            0.18 |
+| Slice Logic    |     0.037 |      301 |       --- |             --- |
+|   LUT as Logic |     0.024 |      103 |     53200 |            0.19 |
 |   BUFG         |     0.008 |        2 |        32 |            6.25 |
-|   Register     |     0.003 |      117 |    106400 |            0.10 |
+|   Register     |     0.003 |      118 |    106400 |            0.11 |
 |   CARRY4       |     0.003 |       20 |     13300 |            0.15 |
 |   Others       |     0.000 |       13 |       --- |             --- |
-| Signals        |     0.049 |      199 |       --- |             --- |
-| I/O            |     0.490 |        9 |       200 |            4.50 |
+| Signals        |     0.046 |      204 |       --- |             --- |
+| I/O            |     0.504 |        9 |       200 |            4.50 |
 | Static Power   |     0.129 |          |           |                 |
-| Total          |     0.707 |          |           |                 |
+| Total          |     0.715 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.105 |       0.095 |      0.010 |
+| Vccint    |       1.000 |     0.099 |       0.089 |      0.010 |
 | Vccaux    |       1.800 |     0.037 |       0.018 |      0.019 |
-| Vcco33    |       3.300 |     0.138 |       0.137 |      0.001 |
+| Vcco33    |       3.300 |     0.142 |       0.141 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -142,12 +142,12 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| Nunchuck                      |     0.579 |
-|   FSM_onehot_state_reg[7]_i_2 |     0.489 |
-|   I2C                         |     0.059 |
+| Nunchuck                      |     0.587 |
+|   FSM_onehot_state_reg[7]_i_2 |     0.481 |
+|   I2C                         |     0.054 |
 |     ClkGenPM                  |     0.022 |
-|     FSMAddressPM              |     0.006 |
-|     FSMI2CPM                  |     0.018 |
+|     FSMAddressPM              |     0.004 |
+|     FSMI2CPM                  |     0.016 |
 |     FSMReadPM                 |    <0.001 |
 |     FSMWritePM                |     0.005 |
 |     SCLGenPM                  |     0.006 |

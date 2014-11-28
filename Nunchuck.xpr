@@ -72,7 +72,20 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PIOPLANDIR/constrs_1/designprops.xml">
+        <FileInfo SFType="CompatPartsDb"/>
+      </File>
+      <File Path="$PIOPLANDIR/constrs_1/usercols.xml">
+        <FileInfo SFType="UserColsDb"/>
+      </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -119,6 +132,7 @@
         <Option Name="TopModule" Val="NunchuckTest"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SimulationRunTime" Val="500us"/>
+        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
