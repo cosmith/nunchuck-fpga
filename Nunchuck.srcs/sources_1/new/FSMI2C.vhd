@@ -18,7 +18,8 @@ entity FSMI2CTransitions is
           GoAddress : out STD_LOGIC;
           GoRead : out STD_LOGIC;
           GoWrite : out STD_LOGIC;
-          GoStartSCL : out STD_LOGIC);
+          GoStartSCL : out STD_LOGIC;
+          DataReady : out STD_LOGIC);
 end FSMI2CTransitions;
 
 
@@ -88,6 +89,7 @@ begin
                     GoRead <= '0';
                     if DoneRead = '1' then
                         state <= Stop;
+                        DataReady <= '1';
                     else
                         state <= WaitRead;
                     end if;

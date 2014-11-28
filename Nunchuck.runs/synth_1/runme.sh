@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log FSMRead.vds -m64 -mode batch -messageDb vivado.pb -source FSMRead.tcl
+EAStep vivado -log I2CController.vds -m64 -mode batch -messageDb vivado.pb -source I2CController.tcl

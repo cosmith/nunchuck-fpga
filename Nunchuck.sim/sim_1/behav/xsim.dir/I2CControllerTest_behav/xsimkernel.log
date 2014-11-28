@@ -1,3 +1,0 @@
-Running: xsim.dir/I2CControllerTest_behav/xsimk.exe -simmode gui -wdb I2CControllerTest_behav.wdb -simrunnum 0 -socket 53654
-Design successfully loaded
-Design Loading CPU Usage: 156 ms

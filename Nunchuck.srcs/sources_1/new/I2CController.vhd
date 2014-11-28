@@ -7,13 +7,13 @@ entity I2CController is
     Port (Clk : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           DataIn : in STD_LOGIC_VECTOR (1 to 8);
-          DataReady : in STD_LOGIC;
           ReadWrite : in STD_LOGIC;
           SlaveAddress : in STD_LOGIC_VECTOR (1 to 7);
           Start : in STD_LOGIC;
           Stop : out STD_LOGIC;
           SCL : out STD_LOGIC;
           SDAOut : out STD_LOGIC;
+          DataOutReady : out STD_LOGIC;
           DataOut : out STD_LOGIC_VECTOR (1 to 8));
 end I2CController;
 
@@ -80,7 +80,8 @@ component FSMI2CTransitions
           GoAddress : out STD_LOGIC;
           GoRead : out STD_LOGIC;
           GoWrite : out STD_LOGIC;
-          GoStartSCL : out STD_LOGIC);
+          GoStartSCL : out STD_LOGIC;
+          DataReady : out STD_LOGIC);
 end component;
 
 signal InternalSlowClock: STD_LOGIC := '0';
@@ -128,7 +129,8 @@ FSMI2CPM : FSMI2CTransitions port map (
     GoAddress => InternalGoAddress,
     GoWrite => InternalGoWrite,
     GoRead => InternalGoRead,
-    GoStartSCL => InternalGoStartSCL);
+    GoStartSCL => InternalGoStartSCL,
+    DataReady => DataOutReady);
 
 FSMWritePM : FSMWrite port map (
     Clk => Clk,

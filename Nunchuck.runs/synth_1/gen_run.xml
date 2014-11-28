@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1416931418">
-  <File Type="RDS-UTIL-PB" Name="FSMRead_utilization_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1417180013">
+  <File Type="RDS-UTIL-PB" Name="I2CController_utilization_synth.pb"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
-  <File Type="RDS-UTIL" Name="FSMRead_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="I2CController_utilization_synth.rpt"/>
   <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FSMRead_timing_summary_synth.rpt"/>
-  <File Type="PA-TCL" Name="FSMRead.tcl"/>
-  <File Type="RDS-RDS" Name="FSMRead.vds"/>
-  <File Type="RDS-DCP" Name="FSMRead.dcp"/>
-  <File Type="VDS-TIMING-PB" Name="FSMRead_timing_summary_synth.pb"/>
-  <File Type="VDS-HWDEF" Name="FSMRead.hwdef"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="I2CController_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="I2CController.tcl"/>
+  <File Type="RDS-RDS" Name="I2CController.vds"/>
+  <File Type="RDS-DCP" Name="I2CController.dcp"/>
+  <File Type="VDS-TIMING-PB" Name="I2CController_timing_summary_synth.pb"/>
+  <File Type="VDS-HWDEF" Name="I2CController.hwdef"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/FSMRead.vhd">
+    <File Path="$PSRCDIR/sources_1/new/SCLGenerator.vhd">
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -21,6 +21,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/FSMWrite.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSMRead.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSMI2C.vhd">
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -41,21 +55,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSMI2C.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="xil_defaultlib"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/SCLGenerator.vhd">
-      <FileInfo>
-        <Attr Name="Library" Val="xil_defaultlib"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/I2CController.vhd">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Nunchuck.vhd">
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -64,7 +71,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="FSMRead"/>
+      <Option Name="TopModule" Val="I2CController"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

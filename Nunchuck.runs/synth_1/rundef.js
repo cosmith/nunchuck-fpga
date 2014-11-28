@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log FSMRead.vds -m64 -mode batch -messageDb vivado.pb -source FSMRead.tcl" );
+         "-log I2CController.vds -m64 -mode batch -messageDb vivado.pb -source I2CController.tcl" );
 
 
 
