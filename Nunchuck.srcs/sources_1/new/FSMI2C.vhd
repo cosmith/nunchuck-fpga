@@ -10,6 +10,7 @@ entity FSMI2CTransitions is
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
           StartCommand : in STD_LOGIC;
+          ReadWrite : in STD_LOGIC;
           DoneAddress : in STD_LOGIC;
           DoneRead : in STD_LOGIC;
           DoneWrite : in STD_LOGIC;
@@ -24,12 +25,12 @@ end FSMI2CTransitions;
 architecture Behavioral of FSMI2CTransitions is
 
 
-type STATE_TYPE is (Idle, Start, Address, WaitAddress, Read, WaitRead, Write, WaitWrite, Stop); 
+type STATE_TYPE is (Idle, Start, Address, WaitAddress, Read, WaitRead, Write, WaitWrite, WaitAck, Stop); 
 signal state : STATE_TYPE;
 
 begin
 
-FSMGlobalTransitions : process(Clk, SCLTick, DataTick, SDAIn, StartCommand, DoneRead, DoneAddress, DoneWrite)
+FSMGlobalTransitions : process(Clk, SCLTick, DataTick, SDAIn, StartCommand, ReadWrite, DoneRead, DoneAddress, DoneWrite)
 begin
     if Clk'event and Clk = '1' then
         case state is
@@ -41,39 +42,44 @@ begin
                 else
                     state <= Idle;
                     SDAOut <= 'Z';
+                    GoAddress <= '0';
+                    GoRead <= '0';
+                    GoWrite <= '0';
+                    GoStartSCL <= '0';
                 end if;
             when Start =>
-                if SCLTick = '1' then
+                if DataTick = '1' then
                     state <= Address;
+                    SDAOut <= 'Z';
+                    GoAddress <= '1';
                 else
-                    state <= Start; 
+                    state <= Start;
                 end if;
             when Address =>
-               if SCLTick = '1' then
-                   GoAddress <= '1';
+               if DataTick = '1' then
                    state <= WaitAddress;
+                   GoAddress <= '0';
                end if;
             when WaitAddress =>
                 SDAOut <= 'Z';
-                if SCLTick = '1' then
-                    GoAddress <= '0';
-                    if DoneAddress = '1' then
-                        if SDAIn = '1' then
-                            state <= Read;
-                        else
-                            state <= Write;
-                        end if;
+                if DoneAddress = '1' then
+                    if ReadWrite = '1' then
+                        state <= Read;
+                        SDAOut <= '1';
                     else
-                        state <= WaitAddress;
+                        state <= Write;
+                        SDAOut <= '1';
                     end if;
+                else
+                    state <= WaitAddress;
                 end if;
             when Read =>
-               if SCLTick = '1' then
-                   if SDAIn = '1' then -- nack
-                       state <= Address;
-                   else -- ack
-                       state <= WaitRead;
-                       GoRead <= '1';
+               if DataTick = '1' then
+                   SDAOut <= 'Z';
+                   if SDAIn = '0' then -- ACK
+                      state <= WaitAck;
+                   else -- NACK, restart sending the address
+                      state <= Start;
                    end if;
                 end if;
             when WaitRead =>
@@ -87,12 +93,12 @@ begin
                     end if;
                 end if;
             when Write =>
-               if SCLTick = '1' then
-                   if SDAIn = '1' then -- nack
-                       state <= Address;
-                   else -- ack
-                       state <= WaitWrite;
-                       GoWrite <= '1';
+               if DataTick = '1' then
+                   SDAOut <= 'Z';
+                   if SDAIn = '0' then -- ACK
+                      state <= WaitAck;
+                   else -- NACK, restart sending the address
+                      state <= Start;
                    end if;
                 end if;
             when WaitWrite =>
@@ -103,6 +109,17 @@ begin
                         state <= Stop;
                     else
                         state <= WaitWrite;
+                    end if;
+                end if;
+            when WaitAck =>
+                if DataTick = '1' then
+                    SDAOut <= 'Z';
+                    if ReadWrite = '1' then
+                        state <= WaitRead;
+                        GoRead <= '1';
+                    else
+                        state <= WaitWrite;
+                        GoWrite <= '1';
                     end if;
                 end if;
             when Stop =>

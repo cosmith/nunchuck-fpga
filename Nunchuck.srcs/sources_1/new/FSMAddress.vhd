@@ -4,7 +4,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity FSMAddress is
-    Port (DataTick : in STD_LOGIC;
+    Port (Clk : in STD_LOGIC;
+          DataTick : in STD_LOGIC;
           Address : in STD_LOGIC_VECTOR (1 to 7);
           GoAddress : in STD_LOGIC;
           SDAOut : out STD_LOGIC;
@@ -18,15 +19,15 @@ signal state : STATE_TYPE := Waiting;
 
 begin
 
-FSMAddressTransitions : process(DataTick, Address, GoAddress)
+FSMAddressTransitions : process(Clk, DataTick, Address, GoAddress)
 begin
-    if DataTick'event and DataTick = '1' then
+    if Clk'event and Clk = '1' then
         case state is
             when Waiting =>
+                DoneAddress <= '0';
                 SDAOut <= 'Z';
-                if DataTick = '1' and GoAddress = '1' then
+                if GoAddress = '1' then
                     state <= Address1;
-                    DoneAddress <= '0';
                     SDAOut <= Address(1);
                 end if;
             when Address1 =>

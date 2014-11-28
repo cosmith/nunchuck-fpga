@@ -8,7 +8,8 @@ end FSMAddressTest;
 architecture Behavioral of FSMAddressTest is
 
 component FSMAddress is
-    Port (DataTick : in STD_LOGIC;
+    Port (Clk : in STD_LOGIC;
+          DataTick : in STD_LOGIC;
           Address : in STD_LOGIC_VECTOR (1 to 7);
           GoAddress : in STD_LOGIC;
           SDAOut : out STD_LOGIC;

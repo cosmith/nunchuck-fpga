@@ -8,6 +8,7 @@ entity I2CController is
           SDAIn : in STD_LOGIC;
           DataIn : in STD_LOGIC_VECTOR (1 to 8);
           DataReady : in STD_LOGIC;
+          ReadWrite : in STD_LOGIC;
           SlaveAddress : in STD_LOGIC_VECTOR (1 to 7);
           Start : in STD_LOGIC;
           Stop : out STD_LOGIC;
@@ -34,7 +35,8 @@ component SCLGenerator is
 end component;
 
 component FSMAddress
-    Port (DataTick : in STD_LOGIC;
+    Port (Clk : in STD_LOGIC;
+          DataTick : in STD_LOGIC;
           Address : in STD_LOGIC_VECTOR (1 to 7);
           GoAddress : in STD_LOGIC;
           SDAOut : out STD_LOGIC;
@@ -70,6 +72,7 @@ component FSMI2CTransitions
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
           StartCommand : in STD_LOGIC;
+          ReadWrite : in STD_LOGIC;
           DoneAddress : in STD_LOGIC;
           DoneRead : in STD_LOGIC;
           DoneWrite : in STD_LOGIC;
@@ -118,6 +121,7 @@ FSMI2CPM : FSMI2CTransitions port map (
     SDAOut => SDAOut,
     SCL => InternalSCL,
     StartCommand => Start,
+    ReadWrite => ReadWrite,
     DoneAddress => InternalDoneAddress,
     DoneRead => InternalDoneRead, 
     DoneWrite => InternalDoneWrite,
@@ -143,9 +147,11 @@ FSMReadPM : FSMRead port map (
     SDAIn => SDAIn,
     GoRead => InternalGoRead,
     DoneRead => InternalDoneRead,
-    SDAOut => SDAOut);
+    SDAOut => SDAOut,
+    Data => DataOut);
 
 FSMAddressPM : FSMAddress port map(
+    Clk => Clk,
     DataTick => InternalDataTick,
     Address => SlaveAddress,
     GoAddress => InternalGoAddress,

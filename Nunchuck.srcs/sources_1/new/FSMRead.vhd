@@ -70,7 +70,7 @@ begin
             when Data8 =>
                 if DataTick = '1' then
 					state <= ACK;
-					SDAOut <= '1';
+					SDAOut <= '0';
                 end if;
             when ACK =>
                 if DataTick = '1' then
@@ -80,7 +80,7 @@ begin
                 end if;
             when NACK =>
                 if DataTick = '1' then
-                    SDAOut <= '0';
+                    SDAOut <= 'Z';
                     Data(1) <= SDAIn;
                     state <= Data1;
                 end if;

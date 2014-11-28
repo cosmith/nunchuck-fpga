@@ -9,7 +9,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="17" />
    <wvobject db_ref_id="1" fp_name="/I2CControllerTest/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -53,6 +53,14 @@
    <wvobject db_ref_id="1" fp_name="/I2CControllerTest/SCL_PERIOD" type="other">
       <obj_property name="ElementShortName">SCL_PERIOD</obj_property>
       <obj_property name="ObjectShortName">SCL_PERIOD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMAddressPM/GoAddress" type="logic">
+      <obj_property name="ElementShortName">GoAddress</obj_property>
+      <obj_property name="ObjectShortName">GoAddress</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMAddressPM/DoneAddress" type="logic">
+      <obj_property name="ElementShortName">DoneAddress</obj_property>
+      <obj_property name="ObjectShortName">DoneAddress</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/I2CControllerTest/I2C/FSMI2CPM/state" type="other">
       <obj_property name="DisplayName">label</obj_property>

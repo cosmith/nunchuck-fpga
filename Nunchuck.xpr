@@ -106,7 +106,7 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="I2CControllerTest"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="SimulationRunTime" Val="10000us"/>
+        <Option Name="SimulationRunTime" Val="500us"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
