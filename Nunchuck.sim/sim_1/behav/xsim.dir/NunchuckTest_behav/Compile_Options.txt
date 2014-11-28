@@ -1,0 +1,1 @@
+--debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "NunchuckTest_behav" --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/NunchuckTest.prj" "xil_defaultlib.NunchuckTest" 

@@ -8,16 +8,14 @@ architecture Behavioral of NunchuckTest is
 
 component Nunchuck is
     Port (Clk : in STD_LOGIC;
-          SDAIn : in STD_LOGIC;
+          SDA : inout STD_LOGIC;
           SCL : out STD_LOGIC;
-          SDAOut : out STD_LOGIC;
           ButtonStates : out STD_LOGIC_VECTOR (0 to 5));
 end component;
 
 signal Clk : STD_LOGIC := '0';
-signal SDAIn : STD_LOGIC := '0';
+signal SDA : STD_LOGIC := 'Z';
 signal SCL : STD_LOGIC := '0';
-signal SDAOut : STD_LOGIC := '0';
 signal ButtonStates : STD_LOGIC_VECTOR (0 to 5) := "000000";
 
 constant CLK_PERIOD : time := 10ns;
@@ -26,10 +24,9 @@ begin
 
 NunchuckPM : Nunchuck port map (
     Clk => Clk,
-    SDAIn => SDAIn,
+    SDA => SDA,
     SCL => SCL,
-    SDAOut => SDAOut,
-    ButtonStates);
+    ButtonStates => ButtonStates);
 
 ClockProc : process
 begin

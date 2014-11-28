@@ -29,6 +29,7 @@ end component;
 constant CLK_PERIOD : time := 10ns;
 constant SLOW_CLK_PERIOD : time := 10us;
 
+signal Clk : STD_LOGIC;
 signal Address : STD_LOGIC_VECTOR (1 to 7) := "1101010";
 signal GoAddress : STD_LOGIC := '0';
 signal SDAOut : STD_LOGIC := '0';
@@ -41,7 +42,8 @@ signal DataTick : STD_LOGIC := '0';
 
 begin
 
-FSMadd : FSMAddress port map (DataTick => DataTick,
+FSMadd : FSMAddress port map (Clk => Clk,
+                           DataTick => DataTick,
                            Address => Address,
                            GoAddress => GoAddress,
                            SDAOut => SDAOut,
@@ -52,6 +54,15 @@ SCLGen : SCLGenerator port map (SlowClock => SlowClock,
                                 Stop => Stop,
                                 SCL => SCL,
                                 DataTick => DataTick);
+
+
+ClkProc : process
+begin
+    Clk <= '0';
+    wait for CLK_PERIOD / 2;
+    Clk <= '1';
+    wait for CLK_PERIOD / 2;
+end process;
 
 Clock : process
 begin

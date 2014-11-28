@@ -31,6 +31,6 @@ ExecStep()
        exit $RETVAL
    fi
 }
-XELAB_1="Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/I2CControllerTest.prj"
+XELAB_1="Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/behav/NunchuckTest.prj"
 
-ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot I2CControllerTest_behav --prj "$XELAB_1"   xil_defaultlib.I2CControllerTest
+ExecStep xelab -m64 --debug typical --relax -L xil_defaultlib -L secureip --snapshot NunchuckTest_behav --prj "$XELAB_1"   xil_defaultlib.NunchuckTest

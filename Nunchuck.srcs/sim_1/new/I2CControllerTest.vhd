@@ -10,20 +10,20 @@ component I2CController is
     Port (Clk : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           DataIn : in STD_LOGIC_VECTOR (1 to 8);
-          DataReady : in STD_LOGIC;
           ReadWrite : in STD_LOGIC;
           SlaveAddress : in STD_LOGIC_VECTOR (1 to 7);
           Start : in STD_LOGIC;
           Stop : out STD_LOGIC;
           SCL : out STD_LOGIC;
           SDAOut : out STD_LOGIC;
-          DataOut : out STD_LOGIC_VECTOR (1 to 8));
+          DataOut : out STD_LOGIC_VECTOR (1 to 8);
+          DataOutReady : out STD_LOGIC);
 end component;
 
 signal Clk : STD_LOGIC;
 signal SDAIn : STD_LOGIC := 'Z';
 signal DataIn : STD_LOGIC_VECTOR (1 to 8) := "11001100";
-signal DataReady : STD_LOGIC := '0';
+signal DataOutReady : STD_LOGIC := '0';
 signal ReadWrite : STD_LOGIC := '1';
 signal SlaveAddress :STD_LOGIC_VECTOR (1 to 7) := "1010010";
 signal Start : STD_LOGIC := '0';
@@ -41,14 +41,14 @@ I2C : I2CController port map (
     Clk => Clk,
     SDAIn => SDAIn,
     DataIn => DataIn,
-    DataReady => DataReady,
     ReadWrite => ReadWrite,
     SlaveAddress => SlaveAddress,
     Start => Start,
     Stop => Stop,
     SCL => SCL,
     SDAOut => SDAOut,
-    DataOut => DataOut);
+    DataOut => DataOut,
+    DataOutReady => DataOutReady);
 
 ClockProc : process
 begin
