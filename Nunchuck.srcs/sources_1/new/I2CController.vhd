@@ -56,7 +56,7 @@ end component;
 
 component FSMWrite
     Port (Clk : in STD_LOGIC;
-          SCL : in STD_LOGIC;
+          SCLTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           Data : in STD_LOGIC_VECTOR (1 to 8);
@@ -134,7 +134,7 @@ FSMI2CPM : FSMI2CTransitions port map (
 
 FSMWritePM : FSMWrite port map (
     Clk => Clk,
-    SCL => InternalSCL,
+    SCLTick => InternalSCLTick,
     DataTick => InternalDataTick,
     SDAIn => SDAIn,
     Data => DataIn,

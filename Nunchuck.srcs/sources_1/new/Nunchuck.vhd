@@ -27,7 +27,7 @@ component I2CController is
 end component;
 
 signal InternalSlaveAddress : STD_LOGIC_VECTOR (0 to 6) := "1010010";
-signal InternalDataIn : STD_LOGIC_VECTOR (0 to 7) := "00000000";
+signal InternalDataIn : STD_LOGIC_VECTOR (0 to 7) := "11000011";
 signal InternalReadWrite : STD_LOGIC := '0';
 signal InternalDataOutReady : STD_LOGIC := '0';
 signal InternalDataOut : STD_LOGIC_VECTOR (0 to 7);

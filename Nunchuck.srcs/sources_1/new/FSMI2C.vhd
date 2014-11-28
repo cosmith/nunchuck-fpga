@@ -69,7 +69,7 @@ begin
                         SDAOut <= '1';
                     else
                         state <= Write;
-                        SDAOut <= '1';
+                        SDAOut <= '0';
                     end if;
                 else
                     state <= WaitAddress;

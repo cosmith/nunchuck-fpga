@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="NunchuckTest_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="NunchuckTest" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/SDA" type="logic">
+      <obj_property name="ElementShortName">SDA</obj_property>
+      <obj_property name="ObjectShortName">SDA</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/SCL" type="logic">
+      <obj_property name="ElementShortName">SCL</obj_property>
+      <obj_property name="ObjectShortName">SCL</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/ButtonStates" type="array">
+      <obj_property name="ElementShortName">ButtonStates[0:5]</obj_property>
+      <obj_property name="ObjectShortName">ButtonStates[0:5]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoAddress" type="logic">
+      <obj_property name="ElementShortName">GoAddress</obj_property>
+      <obj_property name="ObjectShortName">GoAddress</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoRead" type="logic">
+      <obj_property name="ElementShortName">GoRead</obj_property>
+      <obj_property name="ObjectShortName">GoRead</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoWrite" type="logic">
+      <obj_property name="ElementShortName">GoWrite</obj_property>
+      <obj_property name="ObjectShortName">GoWrite</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMWritePM/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+</wave_config>

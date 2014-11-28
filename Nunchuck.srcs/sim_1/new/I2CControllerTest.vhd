@@ -24,7 +24,7 @@ signal Clk : STD_LOGIC;
 signal SDAIn : STD_LOGIC := 'Z';
 signal DataIn : STD_LOGIC_VECTOR (1 to 8) := "11001100";
 signal DataOutReady : STD_LOGIC := '0';
-signal ReadWrite : STD_LOGIC := '1';
+signal ReadWrite : STD_LOGIC := '0';
 signal SlaveAddress :STD_LOGIC_VECTOR (1 to 7) := "1010010";
 signal Start : STD_LOGIC := '0';
 signal Stop : STD_LOGIC := '0';
@@ -72,7 +72,7 @@ AckProc : process
 begin
     SDAIn <= 'Z';
     wait for SCL_PERIOD * 12.5;
-    SDAIn <= '0';
+    SDAIn <= '1';
     wait for SCL_PERIOD; -- ACK
     SDAIn <= 'Z';
     wait for SCL_PERIOD * 1000;
