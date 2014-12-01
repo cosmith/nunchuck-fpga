@@ -27,7 +27,7 @@ begin
         case state is
             when Waiting =>
                 DoneWrite <= '0';
-                if GoWrite = '1' then
+                if DataTick = '1' and GoWrite = '1' then
                     SDAOut <= Data(1);
                     state <= Data1;
                 else

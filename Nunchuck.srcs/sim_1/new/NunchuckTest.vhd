@@ -36,5 +36,13 @@ begin
     wait for CLK_PERIOD / 2;
 end process;
 
+--NACK : process
+--begin
+--    wait for 175us;
+--    SDA <= '0';
+--    wait for 10us;
+--    SDA <= 'Z';
+--    wait;
+--end process;
 
 end Behavioral;

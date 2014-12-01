@@ -132,7 +132,6 @@
         <Option Name="TopModule" Val="NunchuckTest"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SimulationRunTime" Val="500us"/>
-        <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>

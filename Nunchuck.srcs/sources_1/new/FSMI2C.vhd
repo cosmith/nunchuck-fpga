@@ -18,6 +18,7 @@ entity FSMI2CTransitions is
           GoAddress : out STD_LOGIC;
           GoRead : out STD_LOGIC;
           GoWrite : out STD_LOGIC;
+          StopCommand : out STD_LOGIC;
           GoStartSCL : out STD_LOGIC;
           DataOutReady : out STD_LOGIC);
 end FSMI2CTransitions;
@@ -75,13 +76,9 @@ begin
                     state <= WaitAddress;
                 end if;
             when Read =>
-               if DataTick = '1' then
-                   SDAOut <= 'Z';
-                   if SDAIn = '0' then -- ACK
-                      state <= WaitAck;
-                   else -- NACK, restart sending the address
-                      state <= Start;
-                   end if;
+                SDAOut <= '1';
+                if SCLTick = '1' then
+                   state <= WaitAck;
                 end if;
             when WaitRead =>
                 SDAOut <= 'Z';
@@ -95,13 +92,9 @@ begin
                     end if;
                 end if;
             when Write =>
-               if DataTick = '1' then
-                   SDAOut <= 'Z';
-                   if SDAIn = '0' then -- ACK
-                      state <= WaitAck;
-                   else -- NACK, restart sending the address
-                      state <= Start;
-                   end if;
+                SDAOut <= '0';
+                if SCLTick = '1' then
+                    state <= WaitAck;
                 end if;
             when WaitWrite =>
                 SDAOut <= 'Z';
@@ -116,19 +109,27 @@ begin
             when WaitAck =>
                 if DataTick = '1' then
                     SDAOut <= 'Z';
-                    if ReadWrite = '1' then
-                        state <= WaitRead;
-                        GoRead <= '1';
-                    else
-                        state <= WaitWrite;
-                        GoWrite <= '1';
+                end if;
+                
+                if SCLTick = '1' then
+                    if SDAIn = '0' then -- ACK
+                        if ReadWrite = '1' then
+                            state <= WaitRead;
+                            GoRead <= '1';
+                        else
+                            state <= WaitWrite;
+                            GoWrite <= '1';
+                        end if;
+                    else -- NACK, restart sending the address
+                        state <= Stop; -- it needs to stop first otherwise it doensn't understand that it restarted
+                        StopCommand <= '1';
                     end if;
                 end if;
             when Stop =>
-                if SCLTick = '1' then
-                    if SDAIn = '1' then
-                        state <= Idle;
-                    end if;
+                if DataTick = '1' then
+                    state <= Idle;
+                    SDAOut <= '1';
+                    StopCommand <='0';
                 end if;
         end case;
     end if;

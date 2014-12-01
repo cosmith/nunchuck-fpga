@@ -2,15 +2,14 @@
 # Vivado v2014.2 (64-bit)
 # SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
 # IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-# Start of session at: Fri Nov 28 16:20:42 2014
-# Process ID: 4236
+# Start of session at: Mon Dec 01 17:36:20 2014
+# Process ID: 4544
 # Log file: Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.runs/synth_1/Nunchuck.vds
 # Journal file: Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Nunchuck.tcl
 # set_param gui.test TreeTableDev
 # set_param xicom.use_bs_reader 1
-# set_msg_config -id {Common-41} -limit 4294967295
 # set_msg_config -id {HDL 9-1061} -limit 100000
 # set_msg_config -id {HDL 9-1654} -limit 100000
 # set_msg_config -id {Labtools 27-147} -limit 4294967295
@@ -44,30 +43,30 @@ Starting synthesis...
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 228.055 ; gain = 98.035
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 227.469 ; gain = 96.797
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Nunchuck' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:13]
-INFO: [Synth 8-3491] module 'I2CController' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:6' bound to instance 'I2C' of component 'I2CController' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'I2CController' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:20]
-INFO: [Synth 8-3491] module 'ClockGenerator' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd:6' bound to instance 'ClkGenPM' of component 'ClockGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:104]
+INFO: [Synth 8-3491] module 'I2CController' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:6' bound to instance 'I2C' of component 'I2CController' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'I2CController' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:21]
+INFO: [Synth 8-3491] module 'ClockGenerator' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd:6' bound to instance 'ClkGenPM' of component 'ClockGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:107]
 INFO: [Synth 8-638] synthesizing module 'ClockGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'ClockGenerator' (1#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/ClockGenerator.vhd:11]
-INFO: [Synth 8-3491] module 'SCLGenerator' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd:6' bound to instance 'SCLGenPM' of component 'SCLGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:108]
+INFO: [Synth 8-3491] module 'SCLGenerator' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd:6' bound to instance 'SCLGenPM' of component 'SCLGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:111]
 INFO: [Synth 8-638] synthesizing module 'SCLGenerator' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'SCLGenerator' (2#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/SCLGenerator.vhd:16]
-INFO: [Synth 8-3491] module 'FSMI2CTransitions' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:6' bound to instance 'FSMI2CPM' of component 'FSMI2CTransitions' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:117]
-INFO: [Synth 8-638] synthesizing module 'FSMI2CTransitions' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'FSMI2CTransitions' (3#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:26]
-INFO: [Synth 8-3491] module 'FSMWrite' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd:6' bound to instance 'FSMWritePM' of component 'FSMWrite' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:135]
+INFO: [Synth 8-3491] module 'FSMI2CTransitions' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:6' bound to instance 'FSMI2CPM' of component 'FSMI2CTransitions' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'FSMI2CTransitions' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'FSMI2CTransitions' (3#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMI2C.vhd:27]
+INFO: [Synth 8-3491] module 'FSMWrite' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd:6' bound to instance 'FSMWritePM' of component 'FSMWrite' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'FSMWrite' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'FSMWrite' (4#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMWrite.vhd:17]
-INFO: [Synth 8-3491] module 'FSMRead' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd:6' bound to instance 'FSMReadPM' of component 'FSMRead' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:145]
+INFO: [Synth 8-3491] module 'FSMRead' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd:6' bound to instance 'FSMReadPM' of component 'FSMRead' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:149]
 INFO: [Synth 8-638] synthesizing module 'FSMRead' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd:17]
 INFO: [Synth 8-256] done synthesizing module 'FSMRead' (5#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMRead.vhd:17]
-INFO: [Synth 8-3491] module 'FSMAddress' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd:6' bound to instance 'FSMAddressPM' of component 'FSMAddress' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:155]
+INFO: [Synth 8-3491] module 'FSMAddress' declared at 'Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd:6' bound to instance 'FSMAddressPM' of component 'FSMAddress' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:159]
 INFO: [Synth 8-638] synthesizing module 'FSMAddress' [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd:15]
 INFO: [Synth 8-256] done synthesizing module 'FSMAddress' (6#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/FSMAddress.vhd:15]
-INFO: [Synth 8-256] done synthesizing module 'I2CController' (7#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'I2CController' (7#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/I2CController.vhd:21]
 WARNING: [Synth 8-3848] Net ButtonStates in module/entity Nunchuck does not have driver. [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:10]
 INFO: [Synth 8-256] done synthesizing module 'Nunchuck' (8#1) [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:13]
 WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[0]
@@ -77,7 +76,7 @@ WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[3]
 WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[4]
 WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 260.973 ; gain = 130.953
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 261.324 ; gain = 130.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Optimization
@@ -112,26 +111,28 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 478.410 ; gain = 348.391
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 480.637 ; gain = 349.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 478.410 ; gain = 348.391
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 480.637 ; gain = 349.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 478.410 ; gain = 348.391
+Finished RTL Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 480.637 ; gain = 349.965
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSMI2CTransitions'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSMWrite'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSMRead'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSMAddress'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Nunchuck'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSMI2CTransitions'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSMWrite'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSMRead'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSMAddress'
 WARNING: [Synth 8-3848] Net ButtonStates in module/entity Nunchuck does not have driver. [Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sources_1/new/Nunchuck.vhd:10]
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'Nunchuck'
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -143,27 +144,30 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 13    
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	  11 Input     13 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input     32 Bit        Muxes := 1     
 	  13 Input     13 Bit        Muxes := 1     
-	  19 Input     11 Bit        Muxes := 1     
+	  11 Input     13 Bit        Muxes := 1     
+	  18 Input     11 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 2     
 	   9 Input      8 Bit        Muxes := 1     
-	  13 Input      8 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 1     
-	  13 Input      4 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
+	  11 Input      1 Bit        Muxes := 14    
+	   8 Input      1 Bit        Muxes := 11    
 	  13 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 15    
 	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
-	   8 Input      1 Bit        Muxes := 6     
-	  11 Input      1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -173,6 +177,20 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module Nunchuck 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	  13 Input      8 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
 Module ClockGenerator 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -191,11 +209,11 @@ Detailed RTL Component Info :
 Module FSMI2CTransitions 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 5     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	  19 Input     11 Bit        Muxes := 1     
+	  18 Input     11 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
-	  11 Input      1 Bit        Muxes := 12    
+	  11 Input      1 Bit        Muxes := 14    
 Module FSMWrite 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -236,7 +254,7 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 479.031 ; gain = 349.012
+Workers Ready, Starting Parallel Section  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 483.961 ; gain = 353.289
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -247,9 +265,9 @@ WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[3]
 WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[4]
 WARNING: [Synth 8-3331] design Nunchuck has unconnected port ButtonStates[5]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 487.504 ; gain = 357.484
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 493.141 ; gain = 362.469
 ---------------------------------------------------------------------------------
-Finished Parallel Reinfer  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 487.504 ; gain = 357.484
+Finished Parallel Reinfer  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 493.141 ; gain = 362.469
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -259,27 +277,25 @@ Finished RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\I2C/FSMI2CPM/GoRead_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (I2Ci_6/\I2C/FSMReadPM/FSM_onehot_state_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (I2Ci_0/\I2C/FSMI2CPM/FSM_onehot_state_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (I2Ci_3/\I2C/FSMWritePM/FSM_onehot_state_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\I2C/FSMI2CPM/GoStartSCL_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\FSM_onehot_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_11/\I2C/FSMReadPM/FSM_onehot_state_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\I2C/FSMI2CPM/FSM_onehot_state_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_8/\I2C/FSMWritePM/FSM_onehot_state_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\I2C/FSMReadPM/SDAOut_retimed_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\I2C/FSMI2CPM/SDAOut_retimed_reg )
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/FSM_onehot_state_reg[5] ) is unused and will be removed from module Nunchuck.
 WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/FSM_onehot_state_reg[0] ) is unused and will be removed from module Nunchuck.
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/SDAOut_retimed_reg ) is unused and will be removed from module Nunchuck.
 WARNING: [Synth 8-3332] Sequential element (\I2C/FSMWritePM/FSM_onehot_state_reg[0] ) is unused and will be removed from module Nunchuck.
 WARNING: [Synth 8-3332] Sequential element (\I2C/FSMReadPM/FSM_onehot_state_reg[12] ) is unused and will be removed from module Nunchuck.
 WARNING: [Synth 8-3332] Sequential element (\I2C/FSMReadPM/FSM_onehot_state_reg[0] ) is unused and will be removed from module Nunchuck.
 WARNING: [Synth 8-3332] Sequential element (\I2C/FSMReadPM/SDAOut_retimed_reg ) is unused and will be removed from module Nunchuck.
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/GoStartSCL_reg ) is unused and will be removed from module Nunchuck.
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/GoRead_reg ) is unused and will be removed from module Nunchuck.
+WARNING: [Synth 8-3332] Sequential element (\FSM_onehot_state_reg[0] ) is unused and will be removed from module Nunchuck.
+WARNING: [Synth 8-3332] Sequential element (\InternalDataIn_reg[0] ) is unused and will be removed from module Nunchuck.
+WARNING: [Synth 8-3332] Sequential element (\InternalDataIn_reg[1] ) is unused and will be removed from module Nunchuck.
+WARNING: [Synth 8-3332] Sequential element (\InternalDataIn_reg[6] ) is unused and will be removed from module Nunchuck.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 505.691 ; gain = 375.672
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 510.941 ; gain = 380.270
 ---------------------------------------------------------------------------------
-Finished Parallel Area Opt  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 505.691 ; gain = 375.672
-Finished Parallel Section  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 505.691 ; gain = 375.672
+Finished Parallel Area Opt  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 510.941 ; gain = 380.270
+Finished Parallel Section  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 510.941 ; gain = 380.270
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -287,18 +303,16 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 559.945 ; gain = 429.926
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 564.219 ; gain = 433.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 559.945 ; gain = 429.926
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 564.242 ; gain = 433.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMI2CPM/FSM_onehot_state_reg[8] ) is unused and will be removed from module Nunchuck.
-WARNING: [Synth 8-3332] Sequential element (\I2C/FSMReadPM/DoneRead_reg ) is unused and will be removed from module Nunchuck.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 570.688 ; gain = 440.668
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 576.027 ; gain = 445.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -316,7 +330,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 570.688 ; gain = 440.668
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 576.027 ; gain = 445.355
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -329,13 +343,13 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 570.688 ; gain = 440.668
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 576.027 ; gain = 445.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 570.688 ; gain = 440.668
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 576.027 ; gain = 445.355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
@@ -358,15 +372,15 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     2|
-|2     |CARRY4 |    20|
+|2     |CARRY4 |    28|
 |3     |INV    |     1|
-|4     |LUT1   |    64|
-|5     |LUT2   |    39|
-|6     |LUT3   |     5|
-|7     |LUT4   |    31|
-|8     |LUT5   |    29|
-|9     |LUT6   |    42|
-|10    |FDRE   |   118|
+|4     |LUT1   |    96|
+|5     |LUT2   |    54|
+|6     |LUT3   |    13|
+|7     |LUT4   |    25|
+|8     |LUT5   |    45|
+|9     |LUT6   |    85|
+|10    |FDRE   |   171|
 |11    |IBUF   |     1|
 |12    |IOBUF  |     1|
 |13    |OBUF   |     1|
@@ -377,21 +391,21 @@ Report Instance Areas:
 +------+-----------------+------------------+------+
 |      |Instance         |Module            |Cells |
 +------+-----------------+------------------+------+
-|1     |top              |                  |   360|
-|2     |  I2C            |I2CController     |   343|
+|1     |top              |                  |   529|
+|2     |  I2C            |I2CController     |   396|
 |3     |    ClkGenPM     |ClockGenerator    |   107|
-|4     |    FSMAddressPM |FSMAddress        |    34|
-|5     |    FSMI2CPM     |FSMI2CTransitions |    35|
-|6     |    FSMReadPM    |FSMRead           |    29|
-|7     |    FSMWritePM   |FSMWrite          |    49|
-|8     |    SCLGenPM     |SCLGenerator      |    89|
+|4     |    FSMAddressPM |FSMAddress        |    33|
+|5     |    FSMI2CPM     |FSMI2CTransitions |    75|
+|6     |    FSMReadPM    |FSMRead           |    31|
+|7     |    FSMWritePM   |FSMWrite          |    52|
+|8     |    SCLGenPM     |SCLGenerator      |    98|
 +------+-----------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 570.688 ; gain = 440.668
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 576.027 ; gain = 445.355
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 570.688 ; gain = 440.668
-INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 576.027 ; gain = 445.355
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
@@ -402,10 +416,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-47 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+47 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 572.652 ; gain = 395.168
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 576.965 ; gain = 400.152
 # write_checkpoint Nunchuck.dcp
 # report_utilization -file Nunchuck_utilization_synth.rpt -pb Nunchuck_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 572.652 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 28 16:21:15 2014...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 576.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 01 17:36:56 2014...
