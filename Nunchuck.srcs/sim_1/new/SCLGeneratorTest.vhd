@@ -18,6 +18,8 @@ component SCLGenerator is
           Start : in STD_LOGIC;
           Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
+          SCLTick : out STD_LOGIC;
+          SCLFallTick : out STD_LOGIC;
           DataTick : out STD_LOGIC);
 end component;
 
@@ -27,6 +29,8 @@ signal SCL : STD_LOGIC := '0';
 signal Start : STD_LOGIC := '0';
 signal Stop : STD_LOGIC := '0';
 signal DataTick : STD_LOGIC := '0';
+signal SCLTick : STD_LOGIC := '0';
+signal SCLFallTick : STD_LOGIC := '0';
 
 constant CLK_PERIOD : time := 10ns;
 
@@ -39,7 +43,9 @@ sclgen : SCLGenerator port map (SlowClock => Tick,
                                 Start => Start,
                                 Stop => Stop,
                                 SCL => SCL,
-                                DataTick => DataTick);
+                                DataTick => DataTick,
+                                SCLTick => SCLTick,
+                                SCLFallTick => SCLFallTick);
 
 Clock : process 
 begin

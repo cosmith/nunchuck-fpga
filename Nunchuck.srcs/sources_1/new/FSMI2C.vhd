@@ -7,6 +7,7 @@ entity FSMI2CTransitions is
     Port (Clk : in STD_LOGIC;
           SCLTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
+          SCLFallTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
           StartCommand : in STD_LOGIC;
@@ -27,7 +28,7 @@ end FSMI2CTransitions;
 architecture Behavioral of FSMI2CTransitions is
 
 
-type STATE_TYPE is (Idle, Start, Address, WaitAddress, Read, WaitRead, Write, WaitWrite, WaitAck, Stop); 
+type STATE_TYPE is (Idle, Start, Address, WaitAddress, Read, WaitRead, Write, WaitWrite, WaitAck, ReadAck, Stop); 
 signal state : STATE_TYPE;
 
 begin
@@ -109,9 +110,10 @@ begin
             when WaitAck =>
                 if DataTick = '1' then
                     SDAOut <= 'Z';
+                    state <= ReadAck;
                 end if;
-                
-                if SCLTick = '1' then
+            when ReadAck =>
+                if SCLFallTick = '1' then
                     if SDAIn = '0' then -- ACK
                         if ReadWrite = '1' then
                             state <= WaitRead;

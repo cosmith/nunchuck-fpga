@@ -3,6 +3,8 @@
 	<CompatParts>
 	</CompatParts>
 	<PortProps>
+		<Port Name="SDA" OffChipTerm="NONE"/>
+		<Port Name="SCL" OffChipTerm="NONE"/>
 	</PortProps>
 </Compat>
 

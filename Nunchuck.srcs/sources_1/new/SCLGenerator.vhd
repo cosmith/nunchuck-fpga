@@ -10,6 +10,7 @@ entity SCLGenerator is
           Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
           SCLTick : out STD_LOGIC;
+          SCLFallTick : out STD_LOGIC;
           DataTick : out STD_LOGIC);
 end SCLGenerator;
 
@@ -57,13 +58,17 @@ begin
                 DataTick <= '1';
             elsif counter = 3 then
                 SCLTick <= '1';
+            elsif counter = 1 then
+                SCLFallTick <= '1';
             else
                 DataTick <= '0';
                 SCLTick <= '0';
+                SCLFallTick <= '0';
             end if;
         else
             DataTick <= '0';
             SCLTick <= '0';
+            SCLFallTick <= '0';
         end if;
     end if;
 end process;

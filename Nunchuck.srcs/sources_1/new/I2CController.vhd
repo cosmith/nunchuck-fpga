@@ -13,6 +13,7 @@ entity I2CController is
           Stop : out STD_LOGIC;
           SCL : out STD_LOGIC;
           DataTick : out STD_LOGIC;
+          SCLFallTick : out STD_LOGIC;
           SDAOut : out STD_LOGIC;
           DataOutReady : out STD_LOGIC;
           DataOut : out STD_LOGIC_VECTOR (1 to 8));
@@ -32,6 +33,7 @@ component SCLGenerator is
           Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
           SCLTick : out STD_LOGIC;
+          SCLFallTick : out STD_LOGIC;
           DataTick : out STD_LOGIC);
 end component;
 
@@ -70,6 +72,7 @@ component FSMI2CTransitions
     Port (Clk : in STD_LOGIC;
           SCLTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
+          SCLFallTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
           StartCommand : in STD_LOGIC;
@@ -88,6 +91,7 @@ end component;
 
 signal InternalSlowClock: STD_LOGIC := '0';
 signal InternalSCLTick : STD_LOGIC := '0';
+signal InternalSCLFallTick : STD_LOGIC := '0';
 signal InternalDataTick : STD_LOGIC := '0';
 signal InternalDoneAddress : STD_LOGIC := '0';
 signal InternalDoneRead : STD_LOGIC := '0';
@@ -102,7 +106,9 @@ signal InternalGoStartSCL : STD_LOGIC := '0';
 begin
 
 DataTick <= InternalDataTick;
+SCLFallTick <= InternalSCLFallTick;
 Stop <= InternalStop;
+
 
 ClkGenPM : ClockGenerator port map (
     Clk => Clk,
@@ -115,12 +121,14 @@ SCLGenPM : SCLGenerator port map (
     Stop => InternalStop,
     SCL => SCL,
     SCLTick => InternalSCLTick,
+    SCLFallTick => InternalSCLFallTick,
     DataTick => InternalDataTick);
 
 FSMI2CPM : FSMI2CTransitions port map (
     Clk => Clk,
     SCLTick => InternalSCLTick,
     DataTick => InternalDataTick,
+    SCLFallTick => InternalSCLFallTick,
     SDAIn => SDAIn,
     SDAOut => SDAOut,
     SCL => InternalSCL,
