@@ -16,7 +16,7 @@ end SCLGenerator;
 
 architecture Behavioral of SCLGenerator is
 
-type STATE_TYPE is (Idle, Busy); 
+type STATE_TYPE is (Idle, Busy, Stopping); 
 signal state : STATE_TYPE := Idle;
 
 signal counter : integer := 0;
@@ -42,8 +42,15 @@ begin
                     SCL <= '0';
                 end if;
                 if Stop = '1' then
-                    state <= Idle;
+                    state <= Stopping;
+                end if;
+            when Stopping =>
+                if counter = 2 then
                     SCL <= '1';
+                elsif counter = 0 then
+                    SCL <= '0';
+                elsif counter = 1 then
+                    state <= Idle;  
                 end if;
          end case;
     end if;

@@ -4,9 +4,12 @@
 
   set_param gui.test TreeTableDev
   set_param xicom.use_bs_reader 1
+set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Labtools 27-147} -limit 4294967295
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.0 [current_project]

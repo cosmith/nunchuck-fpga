@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1417535191">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1417557646">
   <File Type="RDS-UTIL-PB" Name="Nunchuck_utilization_synth.pb"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL" Name="Nunchuck_utilization_synth.rpt"/>

@@ -19,7 +19,7 @@ component I2CController is
       ReadWrite : in STD_LOGIC;
       SlaveAddress : in STD_LOGIC_VECTOR (1 to 7);
       Start : in STD_LOGIC;
-      Stop : out STD_LOGIC;
+      Stop : in STD_LOGIC;
       SCL : out STD_LOGIC;
       DataTick : out STD_LOGIC;
       SDAOut : out STD_LOGIC;
@@ -37,7 +37,9 @@ signal InternalStop : STD_LOGIC := '0';
 signal InternalDataTick : STD_LOGIC := '0';
 signal counter : integer := 0;
 
-type STATE_TYPE is (Handshake, Byte1, Byte2, Byte3, Byte4, Data, Idle); 
+signal GlobalCounter : integer := 0;
+
+type STATE_TYPE is (Address, Byte1, Byte2, AskData, Data, Idle); 
 signal state : STATE_TYPE := Idle;
 
 begin
@@ -61,21 +63,36 @@ begin
     if Clk'event and Clk = '1' then
         case state is
             when Idle =>
+                InternalStop <= '1';
                 if InternalDataTick = '1' then
                     if counter = 8 then
                         counter <= 0;
-                        state <= Handshake;
+                        state <= Address;
+                        InternalStart <= '1';
                     else
                         counter <= counter + 1;
                     end if;
                 end if;
-            when HandShake =>
-                InternalStart <= '1';
-                InternalReadWrite <= '0'; -- write
+            when Address =>
+                InternalStop <= '0';
+                InternalStart <= '0';
+                
+                if GlobalCounter = 5 then
+                    InternalReadWrite <= '1'; -- read
+                else
+                    InternalReadWrite <= '0'; -- write
+                end if;
+                
                 if InternalDataTick = '1' then
                     if counter = 8 then
                         counter <= 0;
-                        state <= Byte1;
+                        if GlobalCounter = 0 or GlobalCounter = 2 then
+                            state <= Byte1; -- send handshake
+                        elsif GlobalCounter = 4 then
+                            state <= AskData; -- send read data signal
+                        else
+                            state <= Data; -- read data
+                        end if;
                     else
                         counter <= counter + 1;
                     end if;
@@ -86,10 +103,16 @@ begin
                 end if;
             when Byte1 =>
                 InternalStart <= '0';
-                InternalDataIn <= "11110000"; -- init nunchuck's first register byte 1 (0xF0)
+                if GlobalCounter = 0 then
+                    InternalDataIn <= "11110000"; -- init nunchuck's first register byte 1 (0xF0)
+                else
+                    InternalDataIn <= "11111011";
+                end if;
+                
                 if InternalDataTick = '1' then
                     if counter = 8 then
                         counter <= 0;
+                        GlobalCounter <= GlobalCounter + 1;
                         state <= Byte2;
                     else
                         counter <= counter + 1;
@@ -100,11 +123,16 @@ begin
                     end if;
                 end if;
             when Byte2 =>
-                InternalDataIn <= "01010101"; -- init nunchuck's first register byte 2 (0x55)
+                if GlobalCounter = 1 then
+                    InternalDataIn <= "01010101"; -- init nunchuck's first register byte 2 (0x55)
+                else
+                    InternalDataIn <= "00000000";
+                end if;
                 if InternalDataTick = '1' then
                     if counter = 8 then
                         counter <= 0;
-                        state <= Byte3;
+                        GlobalCounter <= GlobalCounter + 1;
+                        state <= Idle;
                     else
                         counter <= counter + 1;
                     end if;
@@ -113,26 +141,13 @@ begin
                         counter <= 0;
                     end if;
                 end if;
-            when Byte3 =>
-                InternalDataIn <= "11111011"; -- init nunchuck's second register byte 1 (0xFB)
+            when AskData =>
+                InternalDataIn <= "00000000"; -- ask for data by sending 0x00
                 if InternalDataTick = '1' then
                     if counter = 8 then
                         counter <= 0;
-                        state <= Byte4;
-                    else
-                        counter <= counter + 1;
-                    end if;
-                    if InternalStop = '1' then
+                        GlobalCounter <= GlobalCounter + 1;
                         state <= Idle;
-                        counter <= 0;
-                    end if;
-                end if;
-            when Byte4 =>
-                InternalDataIn <= "00000000"; -- init nunchuck's second register byte 2 (0x00)
-                if InternalDataTick = '1' then
-                    if counter = 8 then
-                        counter <= 0;
-                        state <= Data;
                     else
                         counter <= counter + 1;
                     end if;
@@ -142,11 +157,11 @@ begin
                     end if;
                 end if;
             when Data =>
-                InternalReadWrite <= '1';
                 if InternalDataTick = '1' then
                     if counter = 53 then
                         counter <= 0;
-                        state <= Data;
+                        GlobalCounter <= 0;
+                        state <= Idle;
                     else
                         counter <= counter + 1;
                     end if;

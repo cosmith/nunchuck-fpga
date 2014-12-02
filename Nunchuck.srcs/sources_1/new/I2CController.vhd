@@ -10,7 +10,7 @@ entity I2CController is
           ReadWrite : in STD_LOGIC;
           SlaveAddress : in STD_LOGIC_VECTOR (1 to 7);
           Start : in STD_LOGIC;
-          Stop : out STD_LOGIC;
+          Stop : in STD_LOGIC;
           SCL : out STD_LOGIC;
           DataTick : out STD_LOGIC;
           SCLFallTick : out STD_LOGIC;
@@ -60,6 +60,7 @@ end component;
 component FSMWrite
     Port (Clk : in STD_LOGIC;
           SCLTick : in STD_LOGIC;
+          SCLFallTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           Data : in STD_LOGIC_VECTOR (1 to 8);
@@ -76,6 +77,7 @@ component FSMI2CTransitions
           SDAIn : in STD_LOGIC;
           SCL : in STD_LOGIC;
           StartCommand : in STD_LOGIC;
+          StopCommand : in STD_LOGIC;
           ReadWrite : in STD_LOGIC;
           DoneAddress : in STD_LOGIC;
           DoneRead : in STD_LOGIC;
@@ -85,7 +87,6 @@ component FSMI2CTransitions
           GoRead : out STD_LOGIC;
           GoWrite : out STD_LOGIC;
           GoStartSCL : out STD_LOGIC;
-          StopCommand : out STD_LOGIC;
           DataOutReady : out STD_LOGIC);
 end component;
 
@@ -107,7 +108,7 @@ begin
 
 DataTick <= InternalDataTick;
 SCLFallTick <= InternalSCLFallTick;
-Stop <= InternalStop;
+InternalStop <= Stop;
 
 
 ClkGenPM : ClockGenerator port map (
@@ -147,6 +148,7 @@ FSMI2CPM : FSMI2CTransitions port map (
 FSMWritePM : FSMWrite port map (
     Clk => Clk,
     SCLTick => InternalSCLTick,
+    SCLFallTick => InternalSCLFallTick, 
     DataTick => InternalDataTick,
     SDAIn => SDAIn,
     Data => DataIn,

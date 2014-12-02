@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date             : Tue Dec 02 16:48:26 2014
+| Date             : Tue Dec 02 23:02:28 2014
 | Host             : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command          : 
 | Design           : Nunchuck
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.848 |
-| Dynamic (W)              | 0.717 |
+| Total On-Chip Power (W)  | 0.891 |
+| Dynamic (W)              | 0.760 |
 | Device Static (W)        | 0.131 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 75.2  |
-| Junction Temperature (C) | 34.8  |
+| Max Ambient (C)          | 74.7  |
+| Junction Temperature (C) | 35.3  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,16 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.058 |      449 |       --- |             --- |
-|   LUT as Logic |     0.043 |      174 |     53200 |            0.32 |
+| Slice Logic    |     0.054 |      519 |       --- |             --- |
+|   LUT as Logic |     0.040 |      208 |     53200 |            0.39 |
 |   BUFG         |     0.008 |        2 |        32 |            6.25 |
-|   Register     |     0.004 |      173 |    106400 |            0.16 |
-|   CARRY4       |     0.003 |       28 |     13300 |            0.21 |
+|   Register     |     0.004 |      202 |    106400 |            0.18 |
+|   CARRY4       |     0.003 |       42 |     13300 |            0.31 |
 |   Others       |     0.000 |       14 |       --- |             --- |
-| Signals        |     0.068 |      331 |       --- |             --- |
-| I/O            |     0.592 |        9 |       200 |            4.50 |
+| Signals        |     0.061 |      376 |       --- |             --- |
+| I/O            |     0.645 |        9 |       200 |            4.50 |
 | Static Power   |     0.131 |          |           |                 |
-| Total          |     0.848 |          |           |                 |
+| Total          |     0.891 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,9 +68,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.143 |       0.133 |      0.010 |
-| Vccaux    |       1.800 |     0.041 |       0.021 |      0.019 |
-| Vcco33    |       3.300 |     0.166 |       0.165 |      0.001 |
+| Vccint    |       1.000 |     0.130 |       0.119 |      0.010 |
+| Vccaux    |       1.800 |     0.043 |       0.023 |      0.019 |
+| Vcco33    |       3.300 |     0.182 |       0.181 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,18 +139,17 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------------+-----------+
-| Name                           | Power (W) |
-+--------------------------------+-----------+
-| Nunchuck                       |     0.717 |
-|   FSM_onehot_state_reg[12]_i_4 |     0.565 |
-|   I2C                          |     0.076 |
-|     ClkGenPM                   |     0.025 |
-|     FSMAddressPM               |     0.006 |
-|     FSMI2CPM                   |     0.027 |
-|     FSMReadPM                  |     0.002 |
-|     FSMWritePM                 |     0.003 |
-|     SCLGenPM                   |     0.012 |
-+--------------------------------+-----------+
++------------------+-----------+
+| Name             | Power (W) |
++------------------+-----------+
+| Nunchuck         |     0.760 |
+|   I2C            |     0.076 |
+|     ClkGenPM     |     0.024 |
+|     FSMAddressPM |     0.006 |
+|     FSMI2CPM     |     0.019 |
+|     FSMReadPM    |     0.002 |
+|     FSMWritePM   |     0.014 |
+|     SCLGenPM     |     0.010 |
++------------------+-----------+
 
 

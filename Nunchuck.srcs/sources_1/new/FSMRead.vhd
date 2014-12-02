@@ -16,7 +16,7 @@ end FSMRead;
 
 architecture Behavioral of FSMRead is
 
-type STATE_TYPE is (Waiting, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Data8, ACK, NACK, Done); 
+type STATE_TYPE is (Waiting, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Data8, Done); 
 signal state : STATE_TYPE := Waiting;
 
 begin
@@ -69,24 +69,14 @@ begin
                 end if;
             when Data8 =>
                 if DataTick = '1' then
-					state <= ACK;
+					state <= Done;
 					SDAOut <= '0';
-                end if;
-            when ACK =>
-                if DataTick = '1' then
-                    state <= Done;
-                    DoneRead <= '1';
-                    SDAOut <= 'Z';
-                end if;
-            when NACK =>
-                if DataTick = '1' then
-                    SDAOut <= 'Z';
-                    Data(1) <= SDAIn;
-                    state <= Data1;
+					DoneRead <= '1';
                 end if;
             when Done =>
                 if DataTick = '1' then
                     state <= Waiting;
+                    SDAOut <= 'Z';
                 end if;
         end case;
     end if;

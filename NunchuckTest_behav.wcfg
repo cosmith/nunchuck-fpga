@@ -18,70 +18,80 @@
       <obj_property name="ElementShortName">SlowClock</obj_property>
       <obj_property name="ObjectShortName">SlowClock</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/SCL" type="logic">
-      <obj_property name="ElementShortName">SCL</obj_property>
-      <obj_property name="ObjectShortName">SCL</obj_property>
-   </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/DataTick" type="logic">
       <obj_property name="ElementShortName">DataTick</obj_property>
       <obj_property name="ObjectShortName">DataTick</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/Stop" type="logic">
-      <obj_property name="ElementShortName">Stop</obj_property>
-      <obj_property name="ObjectShortName">Stop</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/SCLFallTick" type="logic">
       <obj_property name="ElementShortName">SCLFallTick</obj_property>
       <obj_property name="ObjectShortName">SCLFallTick</obj_property>
    </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/SCLGenPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">ClockState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/SCLGenPM/counter" type="other">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/SCL" type="logic">
+      <obj_property name="ElementShortName">SCL</obj_property>
+      <obj_property name="ObjectShortName">SCL</obj_property>
+   </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/SDA" type="logic">
       <obj_property name="ElementShortName">SDA</obj_property>
       <obj_property name="ObjectShortName">SDA</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">MainState</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMWritePM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">FSMWrite</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/InternalStart" type="logic">
+      <obj_property name="ElementShortName">InternalStart</obj_property>
+      <obj_property name="ObjectShortName">InternalStart</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMWritePM/GoWrite" type="logic">
+      <obj_property name="ElementShortName">GoWrite</obj_property>
+      <obj_property name="ObjectShortName">GoWrite</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/InternalStart" type="logic">
+      <obj_property name="ElementShortName">InternalStart</obj_property>
+      <obj_property name="ObjectShortName">InternalStart</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/InternalStop" type="logic">
+      <obj_property name="ElementShortName">InternalStop</obj_property>
+      <obj_property name="ObjectShortName">InternalStop</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/state" type="other">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+      <obj_property name="label">MainState</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/InternalDataIn" type="array">
       <obj_property name="ElementShortName">InternalDataIn[0:7]</obj_property>
       <obj_property name="ObjectShortName">InternalDataIn[0:7]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/ButtonStates" type="array">
-      <obj_property name="ElementShortName">ButtonStates[0:5]</obj_property>
-      <obj_property name="ObjectShortName">ButtonStates[0:5]</obj_property>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/InternalDoneWrite" type="logic">
+      <obj_property name="ElementShortName">InternalDoneWrite</obj_property>
+      <obj_property name="ObjectShortName">InternalDoneWrite</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/CLK_PERIOD" type="other">
-      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
-      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoAddress" type="logic">
-      <obj_property name="ElementShortName">GoAddress</obj_property>
-      <obj_property name="ObjectShortName">GoAddress</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoRead" type="logic">
-      <obj_property name="ElementShortName">GoRead</obj_property>
-      <obj_property name="ObjectShortName">GoRead</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMI2CPM/GoWrite" type="logic">
-      <obj_property name="ElementShortName">GoWrite</obj_property>
-      <obj_property name="ObjectShortName">GoWrite</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/FSMWritePM/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/state" type="other">
-      <obj_property name="ElementShortName">state</obj_property>
-      <obj_property name="ObjectShortName">state</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/counter" type="other">
-      <obj_property name="ElementShortName">counter</obj_property>
-      <obj_property name="ObjectShortName">counter</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/InternalStop" type="logic">
-      <obj_property name="ElementShortName">InternalStop</obj_property>
-      <obj_property name="ObjectShortName">InternalStop</obj_property>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/ReadWrite" type="logic">
+      <obj_property name="ElementShortName">ReadWrite</obj_property>
+      <obj_property name="ObjectShortName">ReadWrite</obj_property>
    </wvobject>
 </wave_config>

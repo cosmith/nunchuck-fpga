@@ -6,6 +6,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity FSMWrite is
     Port (Clk : in STD_LOGIC;
           SCLTick : in STD_LOGIC;
+          SCLFallTick : in STD_LOGIC;
           DataTick : in STD_LOGIC;
           SDAIn : in STD_LOGIC;
           Data : in STD_LOGIC_VECTOR (1 to 8);
@@ -16,22 +17,21 @@ end FSMWrite;
 
 architecture Behavioral of FSMWrite is
 
-type STATE_TYPE is (Waiting, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Data8, ACK, NACK, Done); 
+type STATE_TYPE is (Waiting, Data1, Data2, Data3, Data4, Data5, Data6, Data7, Data8, Done); 
 signal state : STATE_TYPE := Waiting;
 
 begin
 
-FSMWriteTransitions : process(Clk, SCLTick, DataTick, Data, GoWrite, SDAIn)
+FSMWriteTransitions : process(Clk, SCLTick, DataTick, SCLFallTick, Data, GoWrite, SDAIn)
 begin
     if Clk'event and Clk = '1' then
         case state is
             when Waiting =>
+                SDAOut <= 'Z';
                 DoneWrite <= '0';
                 if DataTick = '1' and GoWrite = '1' then
                     SDAOut <= Data(1);
                     state <= Data1;
-                else
-                    SDAOut <= 'Z';
                 end if;
             when Data1 =>
                 if DataTick = '1' then
@@ -70,28 +70,14 @@ begin
                 end if;
             when Data8 =>
                 if DataTick = '1' then
-                    state <= ACK;
+                    state <= Done;
                     SDAOut <= 'Z';
-                end if;
-            when ACK =>
-                if SCLTick = '1' then
-                    SDAOut <= 'Z';
-                    if SDAIn = '1' then
-                        state <= Done;
-                    else
-                        state <= NACK;
-                    end if;
-                end if;
-            when NACK =>
-                if DataTick = '1' then
-                    state <= Data1;
-                    SDAOut <= Data(1);
                 end if;
             when Done =>
-                if DataTick = '1' then
+                DoneWrite <= '1';
+                if SCLTick = '1' then
                     SDAOut <= 'Z';
                     state <= Waiting;
-                    DoneWrite <= '1';
                 end if;
         end case;
     end if;

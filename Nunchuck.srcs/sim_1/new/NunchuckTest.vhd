@@ -39,7 +39,7 @@ end process;
 --NACK : process
 --begin
 --    wait for 175us;
---    SDA <= '0';
+--    SDA <= '1';
 --    wait for 10us;
 --    SDA <= 'Z';
 --    wait;

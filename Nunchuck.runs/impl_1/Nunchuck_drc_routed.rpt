@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Tue Dec 02 16:48:25 2014
+| Date         : Tue Dec 02 23:02:28 2014
 | Host         : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_drc
 -----------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
            Max violations: <unlimited>
-         Violations found: 2
+         Violations found: 3
 
 2. REPORT DETAILS
 -----------------
@@ -35,6 +35,11 @@ Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_des
  #where value2 is the voltage provided to configuration bank 0
 
 Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port SDA expects both input and output buffering but the buffers are incomplete.
 Related violations: <none>
 
 ZPS7-1#1 Warning

@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Tue Dec 02 16:47:50 2014
+| Date         : Tue Dec 02 23:01:54 2014
 | Host         : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file Nunchuck_control_sets_placed.rpt
 | Design       : Nunchuck
@@ -23,7 +23,7 @@ Table of Contents
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
 | Number of unique control sets                                     |    14 |
-| Minimum Number of register sites lost to control set restrictions |    27 |
+| Minimum Number of register sites lost to control set restrictions |    30 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,35 +33,35 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              26 |           18 |
+| No           | No                    | No                     |              26 |           16 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              64 |           17 |
-| Yes          | No                    | No                     |              33 |           12 |
+| Yes          | No                    | No                     |              36 |           16 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              50 |           18 |
+| Yes          | Yes                   | No                     |              76 |           21 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-------------------------------------------------+----------------------------------------------+------------------+----------------+
-|  Clock Signal  |                  Enable Signal                  |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
-+----------------+-------------------------------------------------+----------------------------------------------+------------------+----------------+
-|  Tick          |                                                 |                                              |                2 |              2 |
-|  Clk_IBUF_BUFG | I2C/FSMI2CPM/n_0_FSM_onehot_state[10]_i_1__1    | I2C/FSMI2CPM/n_0_FSM_onehot_state[11]_i_1__1 |                2 |              4 |
-|  Clk_IBUF_BUFG | I2C/SCLGenPM/O7                                 | I2C/FSMReadPM/n_0_FSM_onehot_state[7]_i_1__3 |                1 |              4 |
-|  Clk_IBUF_BUFG | I2C/SCLGenPM/O6                                 | I2C/SCLGenPM/O9                              |                2 |              4 |
-|  Clk_IBUF_BUFG | n_0_InternalDataIn[2]_i_1                       |                                              |                2 |              5 |
-|  Clk_IBUF_BUFG | I2C/FSMWritePM/n_0_FSM_onehot_state[10]_i_1     |                                              |                2 |              6 |
-|  Clk_IBUF_BUFG | I2C/FSMWritePM/n_0_FSM_onehot_state[10]_i_1     | I2C/FSMWritePM/n_0_FSM_onehot_state[12]_i_1  |                4 |              6 |
-|  Clk_IBUF_BUFG | I2C/FSMI2CPM/n_0_FSM_onehot_state[10]_i_1__1    |                                              |                3 |              7 |
-|  Clk_IBUF_BUFG | I2C/SCLGenPM/O7                                 |                                              |                2 |              7 |
-|  Clk_IBUF_BUFG | I2C/FSMAddressPM/n_0_FSM_onehot_state[7]_i_1__2 |                                              |                3 |              8 |
-|  Clk_IBUF_BUFG |                                                 |                                              |               16 |             24 |
-|  Clk_IBUF_BUFG |                                                 | I2C/ClkGenPM/clear                           |                8 |             32 |
-|  Clk_IBUF_BUFG | I2C/SCLGenPM/O1                                 | I2C/FSMI2CPM/O9                              |                9 |             32 |
-|  Tick          |                                                 | I2C/SCLGenPM/n_0_counter[31]_i_1             |                9 |             32 |
-+----------------+-------------------------------------------------+----------------------------------------------+------------------+----------------+
++----------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                  Enable Signal                  |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+
+|  Tick          |                                                 |                                                |                1 |              3 |
+|  Clk_IBUF_BUFG | I2C/SCLGenPM/O5                                 | I2C/FSMReadPM/n_0_FSM_onehot_state[7]_i_1__2   |                1 |              4 |
+|  Clk_IBUF_BUFG | I2C/FSMWritePM/n_0_FSM_onehot_state[10]_i_2     | I2C/FSMWritePM/n_0_FSM_onehot_state[9]_i_1__1  |                1 |              4 |
+|  Clk_IBUF_BUFG | I2C/FSMWritePM/n_0_FSM_onehot_state[10]_i_2     | I2C/FSMWritePM/n_0_FSM_onehot_state[10]_i_1__1 |                1 |              4 |
+|  Clk_IBUF_BUFG | n_0_InternalDataIn[2]_i_1                       |                                                |                4 |              5 |
+|  Clk_IBUF_BUFG | I2C/SCLGenPM/E[0]                               |                                                |                3 |              6 |
+|  Clk_IBUF_BUFG | I2C/SCLGenPM/O5                                 |                                                |                1 |              6 |
+|  Clk_IBUF_BUFG | I2C/FSMAddressPM/n_0_FSM_onehot_state[7]_i_1__1 |                                                |                3 |              8 |
+|  Clk_IBUF_BUFG | I2C/FSMI2CPM/n_0_FSM_onehot_state[11]_i_1       |                                                |                5 |             11 |
+|  Clk_IBUF_BUFG |                                                 |                                                |               15 |             23 |
+|  Clk_IBUF_BUFG |                                                 | I2C/ClkGenPM/clear                             |                8 |             32 |
+|  Clk_IBUF_BUFG | I2C/SCLGenPM/O7                                 | I2C/SCLGenPM/O3                                |                9 |             32 |
+|  Clk_IBUF_BUFG | I2C/SCLGenPM/O1                                 | I2C/SCLGenPM/O10                               |                9 |             32 |
+|  Tick          |                                                 | I2C/SCLGenPM/n_0_counter[31]_i_1               |                9 |             32 |
++----------------+-------------------------------------------------+------------------------------------------------+------------------+----------------+
 
 

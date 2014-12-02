@@ -3,7 +3,6 @@
 	<CompatParts>
 	</CompatParts>
 	<PortProps>
-		<Port Name="SDA" OffChipTerm="FP_VTT_50"/>
 		<Port Name="SCL" OffChipTerm="FP_VTT_50"/>
 	</PortProps>
 </Compat>
