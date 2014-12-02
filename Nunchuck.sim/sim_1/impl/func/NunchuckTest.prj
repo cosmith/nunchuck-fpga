@@ -1,0 +1,8 @@
+verilog xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/impl/func/NunchuckTest_func_impl.v"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/SCLGeneratorTest.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/I2CControllerTest.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMWriteTest.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMReadTest.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMAddressTest.vhd"
+vhdl xil_defaultlib "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/NunchuckTest.vhd"
+nosort

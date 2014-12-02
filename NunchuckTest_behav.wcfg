@@ -9,10 +9,14 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="18" />
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/SCLGenPM/SlowClock" type="logic">
+      <obj_property name="ElementShortName">SlowClock</obj_property>
+      <obj_property name="ObjectShortName">SlowClock</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/SCL" type="logic">
       <obj_property name="ElementShortName">SCL</obj_property>
@@ -21,6 +25,10 @@
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/DataTick" type="logic">
       <obj_property name="ElementShortName">DataTick</obj_property>
       <obj_property name="ObjectShortName">DataTick</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/Stop" type="logic">
+      <obj_property name="ElementShortName">Stop</obj_property>
+      <obj_property name="ObjectShortName">Stop</obj_property>
    </wvobject>
    <wvobject db_ref_id="1" fp_name="/NunchuckTest/NunchuckPM/I2C/SCLFallTick" type="logic">
       <obj_property name="ElementShortName">SCLFallTick</obj_property>

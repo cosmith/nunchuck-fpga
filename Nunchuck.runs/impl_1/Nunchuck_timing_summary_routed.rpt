@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (win64) Build 932637 Wed Jun 11 13:33:10 MDT 2014
-| Date         : Tue Dec 02 15:13:22 2014
+| Date         : Tue Dec 02 16:48:25 2014
 | Host         : D226-10 running 64-bit Service Pack 1  (build 7601)
 | Command      : report_timing_summary -warn_on_violation -file Nunchuck_timing_summary_routed.rpt -pb Nunchuck_timing_summary_routed.pb
 | Design       : Nunchuck
@@ -68,7 +68,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 366 pins that are not constrained for maximum delay. (HIGH)
+ There are 370 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

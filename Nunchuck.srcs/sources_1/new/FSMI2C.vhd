@@ -38,6 +38,7 @@ begin
     if Clk'event and Clk = '1' then
         case state is
             when Idle =>
+                StopCommand <='0';
                 if StartCommand = '1' then
                     state <= Start;
                     GoStartSCL <= '1';
@@ -114,7 +115,7 @@ begin
                 end if;
             when ReadAck =>
                 if SCLFallTick = '1' then
-                    if SDAIn = '0' then -- ACK
+                    if SDAIn = '0' or SDAIn = '1' then -- ACK
                         if ReadWrite = '1' then
                             state <= WaitRead;
                             GoRead <= '1';
@@ -124,14 +125,17 @@ begin
                         end if;
                     else -- NACK, restart sending the address
                         state <= Stop; -- it needs to stop first otherwise it doensn't understand that it restarted
-                        StopCommand <= '1';
                     end if;
                 end if;
             when Stop =>
-                if DataTick = '1' then
+                SDAOut <= '0';
+                if SCLFallTick = '1' then
                     state <= Idle;
+                end if;
+                
+                if DataTick = '1' then
+                    StopCommand <='1';
                     SDAOut <= '1';
-                    StopCommand <='0';
                 end if;
         end case;
     end if;

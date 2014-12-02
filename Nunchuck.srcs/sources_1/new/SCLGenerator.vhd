@@ -41,7 +41,6 @@ begin
                 elsif counter = 0 then
                     SCL <= '0';
                 end if;
-                
                 if Stop = '1' then
                     state <= Idle;
                     SCL <= '1';

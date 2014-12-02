@@ -1,0 +1,5 @@
+Running: xsim.dir/NunchuckTest_func_impl/xsimk.exe -simmode gui -wdb NunchuckTest_func_impl.wdb -simrunnum 0 -socket 51153
+Design successfully loaded
+Design Loading CPU Usage: 139 ms
+Simulation completed
+Simulation CPU Usage: 1980 ms

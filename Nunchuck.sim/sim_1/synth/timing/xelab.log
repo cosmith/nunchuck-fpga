@@ -1,0 +1,436 @@
+Vivado Simulator 2014.2
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2014.2/bin/unwrapped/win64.o/xelab.exe --debug typical --relax --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot NunchuckTest_time_synth -transport_int_delays -pulse_r 0 -pulse_int_r 0 --prj Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/synth/timing/NunchuckTest.prj xil_defaultlib.NunchuckTest xil_defaultlib.glbl 
+Multi-threading is on. Using 2 slave threads.
+INFO: [VRFC 10-165] Analyzing Verilog file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/synth/timing/NunchuckTest_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockGenerator
+INFO: [VRFC 10-311] analyzing module FSMAddress
+INFO: [VRFC 10-311] analyzing module FSMI2CTransitions
+INFO: [VRFC 10-311] analyzing module FSMRead
+INFO: [VRFC 10-311] analyzing module FSMWrite
+INFO: [VRFC 10-311] analyzing module I2CController
+INFO: [VRFC 10-311] analyzing module IOBUF_UNIQ_BASE_
+INFO: [VRFC 10-311] analyzing module Nunchuck
+INFO: [VRFC 10-311] analyzing module SCLGenerator
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/SCLGeneratorTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/I2CControllerTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMWriteTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMReadTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/FSMAddressTest.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.srcs/sim_1/new/NunchuckTest.vhd" into library xil_defaultlib
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 14: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 25: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 36: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 47: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 58: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 69: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 80: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 90: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 100: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 114: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 125: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 138: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 153: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 167: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 181: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 195: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 208: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 223: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 234: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 245: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 260: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 274: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 289: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 304: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 318: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 331: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 346: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 360: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 493: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 559: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 569: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 580: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 607: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 618: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 629: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 640: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 651: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 662: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 673: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 684: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 695: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 706: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 717: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 728: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 739: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 750: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 761: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 772: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 783: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 794: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 805: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 816: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 827: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 838: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 849: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 860: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 871: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 882: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 893: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 904: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 915: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 926: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 954: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 991: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1028: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1065: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1102: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1112: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1122: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1132: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1142: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1152: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1162: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1172: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1182: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1192: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1202: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1212: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1222: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1232: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1242: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1252: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1262: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1272: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1282: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1292: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1302: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1312: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1322: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1332: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1342: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1352: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1362: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1372: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1382: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1392: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1402: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1412: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1439: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1551: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1680: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1826: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 1955: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2084: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2237: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2366: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2444: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2459: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2487: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2502: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2515: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2530: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2545: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2560: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2575: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2590: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2602: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2615: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2627: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2641: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2656: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2670: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2684: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2699: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2846: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2861: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2876: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2891: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2906: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2937: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2952: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2964: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2979: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 2992: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3006: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3021: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3036: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3051: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3066: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3077: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3088: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3103: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3118: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3133: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3147: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3162: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3177: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3190: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3203: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3218: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3231: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3245: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3258: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3272: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3286: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3299: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3314: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3328: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3343: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3355: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3370: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3384: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3399: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3414: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3429: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3444: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3646: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3661: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3676: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3704: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3719: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3733: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3748: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3762: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3775: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3790: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3802: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3817: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3830: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3841: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3856: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3888: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3918: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3933: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3963: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3975: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 3990: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4004: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4033: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4048: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4077: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4092: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4105: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4117: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4132: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4160: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4174: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4188: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4201: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4215: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4229: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4242: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4256: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4269: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4282: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4296: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4309: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4323: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4337: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4350: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4550: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4565: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4576: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4591: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4606: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4637: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4651: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4666: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4681: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4692: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4707: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4718: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4733: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4748: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4759: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4774: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4789: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4804: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4819: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4834: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4849: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4863: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4877: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4889: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 4904: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5123: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5138: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5153: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5168: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5183: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5197: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5212: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5223: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5237: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5252: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5267: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5281: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5296: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5311: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5326: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5356: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5371: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5399: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5413: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5428: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5443: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5458: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5471: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5486: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5501: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5516: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5531: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5542: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5557: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5571: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5583: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5597: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5610: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5642: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5657: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5671: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5682: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5694: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5709: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5724: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5756: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5771: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5784: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5812: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5822: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5832: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5842: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5852: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5862: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5872: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5882: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5892: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5902: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5912: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5922: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5932: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5942: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5952: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5962: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5972: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5982: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 5992: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6002: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6012: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6022: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6033: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6048: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6058: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6068: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6078: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6090: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6103: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6113: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6123: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6133: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6143: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6153: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6163: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6173: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6251: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6380: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6526: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6655: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6784: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6913: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 6981: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7110: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7205: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7218: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7229: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7240: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7336: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7365: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7394: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7404: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7414: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7424: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7434: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7444: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7454: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7464: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7474: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7484: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7494: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7504: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7514: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7524: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7534: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7544: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7554: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7564: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7574: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7584: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7594: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7604: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7614: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7625: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7638: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7653: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7667: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7677: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7687: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7697: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7712: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7722: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7732: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7742: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7752: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7762: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7772: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7782: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7860: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 7989: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8135: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8264: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8393: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8522: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8556: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8600: Unexpected token ,.
+ERROR: [XSIM 43-3224] (SdfError)While parsing sdf file NunchuckTest_time_synth.sdf Line 8729: Unexpected token ,.
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "NunchuckTest_time_synth.sdf", for root module "NunchuckTest/NunchuckPM".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "NunchuckTest_time_synth.sdf", for root module "NunchuckTest/NunchuckPM".
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.PULLUP
+Compiling module simprims_ver.OBUFT
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.sffsrce_fdre
+Compiling module simprims_ver.FDRE(INIT=1'b1)
+Compiling module simprims_ver.FDRE
+Compiling module xil_defaultlib.IOBUF_UNIQ_BASE_
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.ClockGenerator
+Compiling module simprims_ver.x_lut3_mux4
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.FSMAddress
+Compiling module xil_defaultlib.FSMI2CTransitions
+Compiling module xil_defaultlib.FSMRead
+Compiling module xil_defaultlib.FSMWrite
+Compiling module xil_defaultlib.SCLGenerator
+Compiling module xil_defaultlib.I2CController
+Compiling module simprims_ver.OBUF
+Compiling module xil_defaultlib.Nunchuck
+Compiling architecture behavioral of entity xil_defaultlib.nunchucktest
+Built simulation snapshot NunchuckTest_time_synth

@@ -1,0 +1,1 @@
+--debug "typical" --relax --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "NunchuckTest_time_synth" -transport_int_delays -pulse_r "0" -pulse_int_r "0" --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/synth/timing/NunchuckTest.prj" "xil_defaultlib.NunchuckTest" "xil_defaultlib.glbl" 

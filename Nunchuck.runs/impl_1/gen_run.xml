@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1417529540">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1417535240">
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
   <File Type="PWROPT-DCP" Name="Nunchuck_pwropt.dcp"/>
   <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="OPT-DRC" Name="Nunchuck_drc_opted.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Nunchuck_timing_summary_routed.pb"/>
   <File Type="PA-TCL" Name="Nunchuck.tcl"/>
-  <File Type="OPT-DRC" Name="Nunchuck_drc_opted.rpt"/>
   <File Type="OPT-DCP" Name="Nunchuck_opt.dcp"/>
   <File Type="PWROPT-DRC" Name="Nunchuck_drc_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="Nunchuck_placed.dcp"/>
@@ -30,8 +30,8 @@
   <File Type="ROUTE-SIMILARITY" Name="Nunchuck_incremental_reuse_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Nunchuck_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Nunchuck_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Nunchuck_timing_summary_postroute_physopted.pb"/>
   <File Type="RDI-RDI" Name="Nunchuck.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Nunchuck_timing_summary_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="Nunchuck.bit"/>
   <File Type="BG-BIN" Name="Nunchuck.bin"/>
   <File Type="BITSTR-MSK" Name="Nunchuck.msk"/>

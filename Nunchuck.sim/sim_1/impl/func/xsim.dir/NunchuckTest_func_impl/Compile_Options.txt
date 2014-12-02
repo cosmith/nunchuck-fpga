@@ -1,0 +1,1 @@
+--debug "typical" --relax -L "xil_defaultlib" -L "unisims_ver" -L "secureip" --snapshot "NunchuckTest_func_impl" --prj "Z:/Option ISIA/Wang-Smith/Nunchuck/Nunchuck.sim/sim_1/impl/func/NunchuckTest.prj" "xil_defaultlib.NunchuckTest" "xil_defaultlib.glbl" 
